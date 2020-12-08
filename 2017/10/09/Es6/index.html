@@ -1,0 +1,513 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="欢迎你！" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="欢迎你！" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="欢迎你！" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="ES6" />
+
+
+<link rel="canonical" href="http://example.com/2017/10/09/Es6/">
+
+
+
+  <title>
+ES6(这是我见过写的最好的)!推荐 - 总结 |
+高祥 = 欢迎你！ = 前端工程师</title>
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">ES6(这是我见过写的最好的)!推荐
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2017-10-09 19:11:58">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2017-10-09T19:11:58+08:00">2017-10-09</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">高祥</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipey84bjtj20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclj9410cj20zk0m8h12.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexj2jgzj20zk0m8b09.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%80%BB%E7%BB%93/" itemprop="item" rel="index" title="分类于 总结"><span itemprop="name">总结</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2017/10/09/Es6/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="高祥">
+    <meta itemprop="description" content="前端工程师, 前端高级工程师欢迎你">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="欢迎你！">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="varletconst的区别"><a class="markdownIt-Anchor" href="#varletconst的区别">#</a> var，let，const 的区别</h2>
+<pre><code>1.var 变量可以提升，let，const变量不可以提升
+2.var 没有暂时性死区，let，const有暂时性死区
+3.var 允许重复声明，let，const不可以重复声明
+4.var 和let可以修改声明的变量，const不可以修改
+5.var 没有块级作用域，let和const有块级作用域
+</code></pre>
+<h2 id="箭头函数和function的区别"><a class="markdownIt-Anchor" href="#箭头函数和function的区别">#</a> 箭头函数和 function 的区别</h2>
+<pre><code>1.箭头函数是匿名函数，不能作为构造函数，不能使用new
+2.箭头函数内没有arguments，可以用展开运算符...解决
+3.箭头函数的this，始终指向父级上下文（箭头函数的this取决于定义位置父级的上下文，跟使用位置没关系，普通函数this指向调用的那个对象）
+4.箭头函数不能通过call() 、 apply() 、bind()方法直接修改它的this指向。(call、aaply、bind会默认忽略第一个参数，但是可以正常传参)
+5.箭头函数没有原型属性
+</code></pre>
+<h2 id="结构赋值"><a class="markdownIt-Anchor" href="#结构赋值">#</a> 结构赋值</h2>
+<blockquote>
+<p>1 结构赋值就是从对象或数组中提取值，吧右边的值赋给左边<br>
+ 2 分为数据结构，对象结构，结构赋值，结构对象，从方法中返回</p>
+</blockquote>
+<h2 id="原型"><a class="markdownIt-Anchor" href="#原型">#</a> 原型</h2>
+<pre><code>实例化对象和原型的constructor指向构造函数
+构造函数的prototype属性指向原型对象
+实例化对象的__proto__属性指向原型对象
+JavaScript里面每个对象都有一个__paoto__属性，这个属性就是他的原型
+每个方法里面都有一个prototype属性，也是他的原型
+</code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[实例化对象和原型] -- constructor --&gt; B(构造函数的)</span><br><span class="line">B-- prototype --&gt; D(原型对象)</span><br><span class="line">D-- 实例化对象的__proto__--&gt; E(原型对象)</span><br></pre></td></tr></table></figure>
+<h2 id="原型链"><a class="markdownIt-Anchor" href="#原型链">#</a> 原型链</h2>
+<blockquote>
+<p>实例化对象的__proto__指向构造函数的 prototype<br>
+ 构造函数 prototype 的__proto__指向 Object.prototype<br>
+Object.prototype 的__proto__指向 null</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[实例化对象] -- __proto__ --&gt; B(构造函数的prototype)</span><br><span class="line">B-- __proto__ --&gt; D(Object.prototype)</span><br><span class="line">D-- __proto__--&gt; E(null)</span><br></pre></td></tr></table></figure>
+<h2 id="继承"><a class="markdownIt-Anchor" href="#继承">#</a> 继承</h2>
+<h6 id="1原型链继承"><a class="markdownIt-Anchor" href="#1原型链继承">#</a> 1. 原型链继承</h6>
+<blockquote>
+<p>父类的实例做为子类的原型</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fu</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">this</span>.arr=[<span class="string">&#x27;red&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>,<span class="string">&#x27;green&#x27;</span>]</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Zi</span>(<span class="params"></span>)</span>&#123;&#125;</span><br><span class="line">Zi.prototype=<span class="keyword">new</span> Fu();</span><br><span class="line"><span class="keyword">var</span> a=<span class="keyword">new</span> Zi</span><br><span class="line">a.arr.push(<span class="string">&#x27;black&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h6 id="2构造函数继承"><a class="markdownIt-Anchor" href="#2构造函数继承">#</a> 2. 构造函数继承</h6>
+<blockquote>
+<p>在子类内，使用 call 调用父类方法，并将父类的 this 修改为子类的 this，相当于是吧父类的实例属性复制了一份放到子类的函数内</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fu</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">this</span>.arr=[<span class="string">&#x27;red&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>,<span class="string">&#x27;green&#x27;</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Zi</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	Fu.call(<span class="built_in">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a=<span class="keyword">new</span> Zi();</span><br><span class="line">a.arr.push(<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line"><span class="built_in">console</span>.log(a.arr)</span><br></pre></td></tr></table></figure>
+<h6 id="3组合式继承"><a class="markdownIt-Anchor" href="#3组合式继承">#</a> 3. 组合式继承</h6>
+<blockquote>
+<p>既能调用父类实例属性，又能调用父类原型属性</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fu</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">this</span>.name=name;</span><br><span class="line">	<span class="built_in">this</span>.arr=[<span class="string">&#x27;red&#x27;</span>,<span class="string">&#x27;blue&#x27;</span>,<span class="string">&#x27;green&#x27;</span>];</span><br><span class="line">&#125;</span><br><span class="line">Fu.prototype.say=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">this</span>.name)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Zi</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">	Fu.call(<span class="built_in">this</span>,name);</span><br><span class="line">	<span class="built_in">this</span>.age=age;</span><br><span class="line">&#125;</span><br><span class="line">Zi.prototype=<span class="keyword">new</span> Fu();</span><br><span class="line"><span class="keyword">var</span> a=<span class="keyword">new</span> Zi(<span class="string">&#x27;black&#x27;</span>,<span class="number">21</span>,<span class="string">&#x27;女&#x27;</span>)</span><br><span class="line">a.say()<span class="comment">//成功继承</span></span><br></pre></td></tr></table></figure>
+<h6 id="4class类继承"><a class="markdownIt-Anchor" href="#4class类继承">#</a> 4.class 类继承</h6>
+<blockquote>
+<p>相当于 es5 中构造函数<br>
+ class 中定义方法时，前后不能加 function，全部定义在 class 的 protopyte 属性中<br>
+ class 中定义的所有方法是不可枚举的<br>
+ class 中只能定义方法，不能定义对象，变量等<br>
+ class 和方法内默认都是严格模式<br>
+ es5 中 constructor 为隐式属性</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Fu</span>()</span>&#123;</span><br><span class="line">	<span class="function"><span class="title">constructor</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">		<span class="built_in">this</span>.name=name</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="title">say</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="built_in">this</span>.name)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Zi</span> <span class="keyword">extends</span> <span class="title">Fu</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="title">constructor</span>(<span class="params">name,age</span>)</span>&#123;</span><br><span class="line">		<span class="built_in">super</span>(name)</span><br><span class="line">		<span class="built_in">this</span>.age=age</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="title">say</span>(<span class="params"></span>)</span>&#123;<span class="built_in">super</span>.say()&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> a=<span class="keyword">new</span> Zi(<span class="string">&#x27;张三&#x27;</span>)</span><br><span class="line">a.say()</span><br></pre></td></tr></table></figure>
+<h2 id="promise"><a class="markdownIt-Anchor" href="#promise">#</a> Promise</h2>
+<blockquote>
+<p>1. <code>概述</code> ：Promise 是异步编程的一种解决方案，从语法上讲，Promise 是一个对象，可以获取异步操作的消息<br>
+ 2. <code>目的</code> ： （1）、避免回调地狱的问题（2）、Promise 对象提供了简洁的 API，使得控制异步操作更加容易<br>
+ 3.Promise 有 <code>三种状态</code> ：pendding // 正在请求，rejected // 失败，resolved // 成功<br>
+ 4. <code>基础用法</code> ：new Promise (function (resolve,reject){ })<br>
+ resolved,rejected 函数：在异步事件状态 pendding-&gt;resolved 回调成功时，通过调用 resolved 函数返回结果；当异步操作失败时，回调用 rejected 函数显示错误信息</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 封装一个promise;将url提取出来;</span></span><br><span class="line">    <span class="keyword">var</span>  p  = <span class="function"><span class="keyword">function</span>(<span class="params">url</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function"><span class="keyword">function</span>(<span class="params">resolve,reject</span>)</span>&#123;</span><br><span class="line">            $.get(url,<span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">            resolve(data);</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">Promise</span>.all([</span><br><span class="line">            p(<span class="string">&quot;https://cnodejs.org/api/v1/topics?tab=good&quot;</span>),</span><br><span class="line">            p(<span class="string">&quot;https://cnodejs.org/api/v1/topics?tab=share&quot;</span>),</span><br><span class="line">        ]).then(<span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(result);</span><br><span class="line">        &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="async和await"><a class="markdownIt-Anchor" href="#async和await">#</a> async 和 await</h2>
+<blockquote>
+<p>async 其实就是 promise 的语法糖，可以让普通函数变为一个异步函数，返回的是一个 promise 对象</p>
+</blockquote>
+<pre><code>1.async使用在函数前面，把函数变成一个异步函数，返回值是个promise对象。
+2.await只能使用在async声明的函数里，不能使用在普通函数里。
+3.异步操作方法的前面要加关键字await 意思就是等一下，是可以等到你的数据加载过来以后才会去运行下边的 js 内容，而且 await 接收的 对象必须还是个 promise 对象。，注意：async和await必须一起使用，否则会报错。
+4.async/await 可以解决异步，回调地域
+</code></pre>
+<h2 id="generator"><a class="markdownIt-Anchor" href="#generator">#</a> Generator</h2>
+<p><mark>要了解 Generator 就要先了解他出现的原因</mark></p>
+<pre><code>1.当初设计是为了解决地域回调问题的
+2.因为当时的promise解决地域回调代码量过多
+3.出现generator没多久async/await就出来了
+4.于是generator就处于一个尴尬的境地，慢慢的被人遗忘了
+</code></pre>
+<blockquote>
+<p><code>语法上</code> ，Generator 函数是一个状态机，封装了多个内部状态。<br>
+ <code>形式上</code> ，Generator 是一个函数。不同于普通函数，是可以暂停执行的，所以函数名之前要加星号，以示区别。<br>
+整个 Generator 函数就是一个封装的异步任务，或者说是异步任务的容器，异步操作需要暂停的地方，都用 <code>yield</code>  语句。</p>
+</blockquote>
+<pre><code>1.function 关键字和函数之间有一个星号(*),且内部使用yield表达式，定义不同的内部状态。
+2.调用Generator函数后，该函数并不执行，返回的也不是函数运行结果，而是一个指向内部状态的指针对象。
+3.Generator 函数是分段执行的，yield表达式是暂停执行的标记，而next方法可以恢复执行。
+</code></pre>
+<p><code>总结一波</code></p>
+<blockquote>
+<p><mark>从回调函数，到 promise, 再到 generator, 再到 Async/await, 这四种分别代表了 JavaScript 异步编程解决方案的进化路程。async 和 generator 函数主要就是为了解决异步的并发调用使用的 ，直接将参数从 then 里取出来，相比 promise 的链式调用，传参更加方便，异步顺序更加清晰</mark></p>
+</blockquote>
+<h2 id="深拷贝和浅拷贝"><a class="markdownIt-Anchor" href="#深拷贝和浅拷贝">#</a> 深拷贝和浅拷贝</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//深拷贝</span></span><br><span class="line"> <span class="keyword">let</span> obj=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">5</span>]</span><br><span class="line"> <span class="keyword">let</span> arr=<span class="built_in">JSON</span>.stringify(obj)</span><br><span class="line"> <span class="keyword">let</span> es=<span class="built_in">JSON</span>.parse(arr)</span><br><span class="line"> es[<span class="number">0</span>]=<span class="number">99</span></span><br><span class="line"> <span class="built_in">console</span>.log(obj,es);</span><br><span class="line"><span class="comment">//浅拷贝</span></span><br><span class="line"><span class="keyword">let</span> a=[<span class="number">0</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line"><span class="keyword">let</span> b=a.slice()</span><br><span class="line">a[<span class="number">1</span>]=<span class="number">000000000</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a,b)</span><br><span class="line"><span class="comment">//浅拷贝</span></span><br><span class="line"> <span class="keyword">let</span> a=[<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"> <span class="keyword">var</span> b=a;</span><br><span class="line"> b[<span class="number">0</span>]=<span class="number">000000000000000</span></span><br><span class="line"> <span class="built_in">console</span>.log(a,b);</span><br></pre></td></tr></table></figure>
+<h2 id="闭包"><a class="markdownIt-Anchor" href="#闭包">#</a> 闭包</h2>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方法一</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">       <span class="keyword">var</span> a=<span class="number">111</span>;</span><br><span class="line">       <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(a+<span class="number">333</span>);</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">let</span> q=foo()</span><br><span class="line">   q()</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="keyword">var</span> es=(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">      <span class="keyword">var</span> i=<span class="number">222</span>;</span><br><span class="line">      <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">          <span class="built_in">console</span>.log(i)</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;)()</span><br><span class="line">  es()</span><br><span class="line"><span class="comment">//方法三</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">       <span class="keyword">var</span> a=<span class="number">111</span>;</span><br><span class="line">       <span class="function"><span class="keyword">function</span> <span class="title">es</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(a+<span class="number">333</span>);</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span>&#123;</span><br><span class="line">       		es</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   foo().es()</span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/ES6/" rel="tag"><i class="ic i-tag"></i> ES6</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-12-08 19:19:30" itemprop="dateModified" datetime="2020-12-08T19:19:30+08:00">2020-12-08</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="高祥 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="高祥 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="高祥 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>高祥君 <i class="ic i-at"><em>@</em></i>欢迎你！
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2017/10/09/Es6/" title="ES6(这是我见过写的最好的)!推荐">http://example.com/2017/10/09/Es6/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2017/10/09/ajax%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeyonbf9j20zk0m8e81.jpg" title="Ajax详细获取数据(不会的转行吧！)">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 总结</span>
+  <h3>Ajax详细获取数据(不会的转行吧！)</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#varletconst%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.</span> <span class="toc-text"> var，let，const 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%92%8Cfunction%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.</span> <span class="toc-text"> 箭头函数和 function 的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E8%B5%8B%E5%80%BC"><span class="toc-number">3.</span> <span class="toc-text"> 结构赋值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text"> 原型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-number">5.</span> <span class="toc-text"> 原型链</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">6.</span> <span class="toc-text"> 继承</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF"><span class="toc-number">6.0.0.0.1.</span> <span class="toc-text"> 1. 原型链继承</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%BB%A7%E6%89%BF"><span class="toc-number">6.0.0.0.2.</span> <span class="toc-text"> 2. 构造函数继承</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3%E7%BB%84%E5%90%88%E5%BC%8F%E7%BB%A7%E6%89%BF"><span class="toc-number">6.0.0.0.3.</span> <span class="toc-text"> 3. 组合式继承</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4class%E7%B1%BB%E7%BB%A7%E6%89%BF"><span class="toc-number">6.0.0.0.4.</span> <span class="toc-text"> 4.class 类继承</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#promise"><span class="toc-number">7.</span> <span class="toc-text"> Promise</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#async%E5%92%8Cawait"><span class="toc-number">8.</span> <span class="toc-text"> async 和 await</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#generator"><span class="toc-number">9.</span> <span class="toc-text"> Generator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B5%85%E6%8B%B7%E8%B4%9D"><span class="toc-number">10.</span> <span class="toc-text"> 深拷贝和浅拷贝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AD%E5%8C%85"><span class="toc-number">11.</span> <span class="toc-text"> 闭包</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2017/10/09/Es6/" rel="bookmark" title="ES6(这是我见过写的最好的)!推荐">ES6(这是我见过写的最好的)!推荐</a></li><li><a href="/2017/10/09/ajax%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/" rel="bookmark" title="Ajax详细获取数据(不会的转行吧！)">Ajax详细获取数据(不会的转行吧！)</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="高祥"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">高祥</p>
+  <div class="description" itemprop="description">前端高级工程师欢迎你</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">2</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">1</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">2</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdXJuYW1l" title="https:&#x2F;&#x2F;github.com&#x2F;yourname"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/Es6/" title="ES6(这是我见过写的最好的)!推荐">ES6(这是我见过写的最好的)!推荐</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/ajax%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/" title="Ajax详细获取数据(不会的转行吧！)">Ajax详细获取数据(不会的转行吧！)</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2020</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">高祥 @ 高祥</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2017/10/09/Es6/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
