@@ -1,0 +1,716 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="主人" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="主人" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="主人" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="ES6" />
+
+
+<link rel="canonical" href="http://example.com/2017/10/09/JavaScript%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/">
+
+
+
+  <title>
+JavaScript常用方法总结（前端的必须好好看看） - 总结 |
+GX = 主人 = 前端工程师</title>
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JavaScript常用方法总结（前端的必须好好看看）
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2017-10-09 19:11:58">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2017-10-09T19:11:58+08:00">2017-10-09</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">GX</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclfdu6exj20zk0m87hw.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeuv80yoj20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit31ffoj20zk0m8naf.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E6%80%BB%E7%BB%93/" itemprop="item" rel="index" title="分类于 总结"><span itemprop="name">总结</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2017/10/09/JavaScript%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="高祥">
+    <meta itemprop="description" content="前端工程师, 前端高级工程师欢迎你">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="主人">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="1类型"><a class="markdownIt-Anchor" href="#1类型">#</a> 1. 类型</h2>
+<pre><code>instanceof：判断一个对象是不是某种类型。
+constructor：返回对象的构造函数。
+prototype：获取类的prototype对象。
+propertyIsEnumerable(property)：是否是可枚举的属性。
+hasOwnProperty(property)：是否属于本类定义的属性。
+isPrototypeOf(Object)：是否是指定类的prototype。
+toString()：返回对象对应的字符串。
+valueOf()：返回对象对应的原始类型值。
+</code></pre>
+<h2 id="2数组"><a class="markdownIt-Anchor" href="#2数组">#</a> 2. 数组</h2>
+<pre><code>cancat(value,...) 	将两个数组合并为一个新的数组，参数指定的数组的数组元素放在后面。该方法的参数可以是一个数组，也可以是一组值。
+join(separator) 	使用指定的分隔符（separator）将数组元素依次拼接起来，形成一个字符串返回。
+push(value,...) 	在数组末尾增加一个活多个数组元素（增加的元素数量与参数个数相同），并返回增加元素后的数组长度。该操作相当于数据结构中的入栈操作。
+reverse() 		颠倒数组中元素的次序。例如，如果数组中各个元素的值依次为1/2/3/4/5，那么执行reverse()方法之后，数组的值依次为5、4、3、2、1。
+shift() 		删除数组的第一个元素，并返回其值，数组的长度减少1.该操作相当于数据结构中的出队列操作。
+slice(start,end) 	从现有数组中提取指定个数的数据元素，形成一个新的数组。所提取元素的下标从start开始，到end结束，但不包括end。
+sort(orderfunc) 	将数组元素排序。参数orderfunc可选。省略该参数时，按字母顺序或汉字的拼音方式排序。可以使用orderfunc来指定排序方式。orderfunc为排序函数的名称，该函数应该使用两个参数，并返回一个整数值。返回值的要求是：当第一个参数大于第二个参数时，返回值大于0；当第一个参数等于第二个参数时，返回值等于0；当第一个参数小于第二个参数时，返回值小于0。
+splice(start,delteCount,value...) 	从start指定的位置开始，删除delteCount个数组元素，然后在删除位置前面添加于value值个数相同的数组元素，并以此将其值设置为value参数指定的值。该函数的功能相当于文本编辑器中的替换功能。
+toLocaleString() 	返回数组的本地化字符串表示。
+toString() 	返回数组的字符串表示。
+unshift(value,...) 	在数组的开始位置增加一些数组元素，增加的数组元素的数量与value参数的个数相同，并依次使用参数value对各数组元素赋值。
+</code></pre>
+<h2 id="3math"><a class="markdownIt-Anchor" href="#3math">#</a> 3.			Math</h2>
+<pre><code>方法 		描述
+Math.abs(x) 	返回x的绝对值
+Math.acos(x) 	返回x的反余弦值，返回值的单位为弧度，值域在0-π之间
+Math.asin(x) 	返回x的反正弦值，返回值的单位为弧度，值域在-π/2 - π/2之间
+Math.atan(x) 	返回x的反正切值，返回值的单位为弧度，值域在-π/2 - π/2之间
+Math.atan2(y,x) 	计算x/y的反正切值，返回值的单位为弧度，值域在-π - π之间
+Math.ceil(x) 	返回大于等于x但最接近x的整数
+Math.cos(x) 	返回x的余弦函数值，x的单位为弧度
+Math.exp(x) 	返回ex的值，e是欧拉常数
+Math.floor(x) 	返回小于等于x但最接近x的整数
+Math.log(x) 	返回x的自然对数值
+Math.max(args...) 	返回一组参数中的最大数。没有参数时返回-Infinity，如果任何参数的值为NaN或任何参数的值不能转换为数值，那么该方法返回NaN
+Math.min(args...) 	返回一组参数中的最小数。没有参数时返回-Infinity，如果任何参数的值为NaN或任何参数的值不能转换为数值，那么该方法返回NaN
+Math.pow(x,y) 	计算xy的值
+Math.random() 	返回0.0-1.0之间的一个伪随机数
+Math.round(x) 	返回最接近x的整数，及对x做四舍五入运算
+Math.sin(x) 	返回x的正弦值，x的单位为弧度
+Math.sqrt(x) 	返回x的平方根，x大于等于0
+Math.tan(x) 	返回x的正切值，x的单位是弧度
+</code></pre>
+<h2 id="4字符串"><a class="markdownIt-Anchor" href="#4字符串">#</a> 4.			字符串</h2>
+<pre><code>方法 			描述
+toExponential(digits) 	将数值转换为指数方式表示的字符串形式返回。指数表示中，整数部分占一位数字，小数点后面又digits位数。如果实际数字位数大于digits，那么进行截断；如果实际数字位数小于digits，那么末尾添0。digits的有效值在0-20之间。如果省略digits，那么小数点后有几位数字就会给出几位数字。
+toFixed(digits) 		返回字符串形式表示的数值，不使用指数表示方式。小数点后的位数由digits参数指定，digits的有效值在0-20之间。
+toLocaleString() 		使用本地数字格式将数值转换为字符串，在不同语言的系统中，千位分隔式可能不同
+toPrecision(precision) 	返回一个包含precision为有效数字表示的字符串，按本地数字格式进行转换。precision的有效值在1-21之间。返回的字符串尽可能使用定点数表示法，否则使用指数表示法。必要时进行截断和填0操作
+toString(radix) 		按指定的进制radix将数值转换为字符串，并返回该字符串。radix的有效值在2-36之间。省略radix参数时，按十进制进行转换
+</code></pre>
+<h2 id="5string对象"><a class="markdownIt-Anchor" href="#5string对象">#</a> 5.String 对象</h2>
+<pre><code>方法 			描述
+String.anchor(name) 	等价于HTML标签&lt;a name=&quot;name&quot;&gt;String&lt;/a&gt;
+String.big() 		等价于HTML标签&lt;big&gt;String&lt;/big&gt;
+String.blink() 		等价于HTML标签&lt;blink&gt;String&lt;/blink&gt;
+String.bold() 		等价于HTML标签&lt;b&gt;String&lt;/b&gt;
+String.fixed() 		等价于HTML标签&lt;tt&gt;String&lt;/tt&gt;
+String.fontcolor(color) 	等价于HTML标签&lt;font color=&quot;color&quot;&gt;String&lt;/font&gt;
+String.fontsize(size) 	等价于HTML标签&lt;font size=&quot;size&quot;&gt;String&lt;/font&gt;
+String.italics() 		等价于HTML标签&lt;i&gt;String&lt;/i&gt;
+String.link(URL) 		等价于HTML标签&lt;a href=&quot;URL&quot;&gt;String&lt;/a&gt;
+String.small() 		等价于HTML标签&lt;small&gt;String&lt;/small&gt;
+String.strike() 		等价于HTML标签&lt;strike&gt;String&lt;/strike&gt;
+String.sub() 		等价于HTML标签&lt;sub&gt;String&lt;/sub&gt;
+String.sup() 		等价于HTML标签&lt;sup&gt;String&lt;/sup&gt;
+方法 		描述		
+charAt(n) 	返回字符串中第n个位置的字符。n从零开始计算
+charCodeAt(n) 	返回字符串中第n个位置的字符的Unicode编码。n从零开始计算
+concat(value,...) 	将每一个参数转换为字符串并拼接在该字符串对象的字符串值后面，形成一个字符串并返回
+indexOf(subString,start) 	返回subString在字符串中start位置后面第一次出现的开始位置。如果subString在字符串start位置后面没有出现，该方法返回-1；省略start时，从字符串开始位置搜索字符串
+lastIndexOf(subString,start) 	返回subString在字符串中start位置前面最后一次出现的开始位置。如果subString在字符串中start位置前面没有出现，该方法返回-1；省略start时，从字符串尾部开始搜索字符串
+match(regexp) 	使用指定的正则表达式匹配字符串，并返回包含匹配结果的数组，如果没有匹配结果，则返回null。如果regexp不是全局正则表达式，那么返回的数组与RegExp.exec()方法的执行结果相同；如果regexp是全局正则表达式（包含了“g”属性），返回数组的元素包含了每一个匹配的结果。关于该函数，将在后面正则表达式中详细介绍
+replace(regexp,replacement) 	使用replacement替换字符串中regexp指定的内容，并返回替换后的结果。regexp可以是正则表达式，也可以是一般文本。replacement中可以包含正则表达式，也可以是一个函数
+search(regexp) 	返回与regexp匹配的第一个字符串的开始位置。如果都不匹配，则返回-1
+slice(start,end) 	返回字符串中从start位置开始，到end位置结束的子字符串，子字符串中，不包括end位置的字符。省略end参数时，则得到的子字符串为从start位置开始，到字符串结束位置的子串。如果参数为负值，表示从字符串尾部开始计算字符串的位置
+split(delimiter) 	以delimiter为分隔符，将字符串拆分到一个字符串数组中，并返回该数组。delimiter可以是一个字符串，也可以是正则表达式
+substring(from,to) 	返回从第from个字符开始，到(to-1)个字符结束的子串，如果省略了to参数，那么返回从第from个字符开始，到字符串末尾的子串。from的有效值在0到字符串长度-1之间
+substr(start,length) 	返回从第start位置开始的连续length个字符组成的子串。省略length参数时，返回从第start位置开始，到字符串结尾的子串
+toLowerCase() 	将所有字符转换为小写后返回，该函数对汉字没有作用
+toUpperCase() 	将所有字符转换为大写后返回，该函数对汉字没有作用
+</code></pre>
+<h2 id="6浏览器属性"><a class="markdownIt-Anchor" href="#6浏览器属性">#</a> 6. 浏览器属性</h2>
+<pre><code>navigator对象提供的属性如下表所示：
+属性 	描述
+appCodeName 	浏览器的代码名称，只读属性。IE浏览器的该属性为”Mozilla“
+appName 	浏览器的实际名称，只读属性。IE浏览器的该属性值为”Microsoft Internet Explorer“
+appVersion 	浏览器的版本号和平台信息，只读属性
+cookieEnabled 	浏览器是否允许使用cookie，只读属性。可以使用cookie时，值为true，否则为false
+platform 	给出运行浏览器的操作系统或硬件的类型，典型值为&quot;Win32&quot;，&quot;MacPPC&quot;和&quot;Linux i586&quot;
+systemLanguage 	给出操作系统使用的缺省语言，只读属性。它使用2个或5个字符的字符串指明语言类型，比如，简体中文操作系统的值为&quot;zh-cn&quot;
+userAgent 	给出浏览器在HTTP请求中使用的用户代理首部的值，通常是appCodeName属性值，后面跟一个斜线(/)，在跟上appVersion的值
+userLanguage 	给出当前使用的语言，只读属性
+</code></pre>
+<h2 id="7window"><a class="markdownIt-Anchor" href="#7window">#</a> 7.Window</h2>
+<pre><code>属性 	描述
+closed 	指明窗口是否已经被关闭，只读属性，true表示已关闭,false表示未关闭
+defaultStatus 	指定浏览器下方状态栏中显示的默认信息。只要状态栏中没有显示其他消息，就显示该属性指定的信息
+document 	只读属性，为当前窗口或框架包含的Document对象的引用
+frames[] 	记录窗口中包含的框架，每一个框架都是一个window对象，框架本身可以嵌套
+history 	指向history对象的引用，只读属性
+length 	窗口中包含的框架个数
+location 	用于本窗口的location对象。该属性的行为比较特殊，如果将一个URL复制给该属性，那么浏览器就加载并显示该URL指定的文档
+name 	窗口的名称，窗口的名称可以通过window.open()方法指定，也可以在标记中使用name属性指定
+navigator 	执行navigator对象的引用，只读属性。通过navigator对象，程序可以了解浏览器的基本信息
+opener 	指向打开本窗口的窗口的引用
+parent 	一个只读引用，指向包含本窗口或框架的窗口。如果本窗口为顶层窗口，那么该属性指向自己
+screen 	指向screen对象的引用，只读属性
+self 	指向窗口本身的引用，与window属性的意义完全相同
+status 	指定浏览器状态栏中显示的临时信息
+top 	一个只读引用，指向包含本窗口的最顶层窗口，如果本窗口就是最顶层窗口，那么该属性指向自己
+window 	当前窗口，与self属性意义相同
+clientInformation 	该属性只用于IE浏览器，是navigator属性的别名
+event 	该属性只用于IE浏览器，指向Event对象，Event对象包含了最近发生事件的细节。在IE对象模型中，Event对象没有作为事件处理程序的参数传递，而是赋值给了event属性
+innerHeight,innerWidth 	只适用于Netscape 4+，指定窗口总的高度、宽度，以像素为单位。该区域包括菜单栏、工具栏、滚动条和窗口边框
+outerHeight,outerWidth 	只适用于Netscape 4+，指定窗口总的高度、宽度，以像素为单位。该区域包括菜单栏、工具栏、滚动条和窗口边框
+pageXOffset,pageYOffset 	整数型只读值，指定当前文档已经向右（pageXOffset）、向下（pageYOffset）滚动了多少像素
+screenX,screenY 	整数型只读值，指定窗口左上角在屏幕的x,y坐标。如果当前窗口是框架，那么这两个属性指定框架左上角在顶层窗口上的x,y坐标
+</code></pre>
+<h2 id="8window对象的方法"><a class="markdownIt-Anchor" href="#8window对象的方法">#</a> 8.window 对象的方法：</h2>
+<pre><code>					方法 	描述
+alert(message) 	弹出对话框，显示message信息，无返回值
+blur() 	从窗口中移去键盘输入焦点，无返回值
+clearInterval(intervalId) 	清除先前设置的定时器，无返回值
+clearTimeout(timeoutId) 	清除先前设置的超时，无返回值
+close() 	关闭窗口，无返回值
+confirm(question) 	显示一个确认对话框，单击“确定”按钮时返回true，否则返回false
+focus 	得到键盘的输入焦点，同时将该窗口放在其他窗口的前面，无返回值
+getComputedStyle(elt) 	返回一个只读的style对象，它包含了应用于指定文档元素elt的所有CSS样式（不仅仅是嵌入样式）。从这个计算样式对象查询得到的定位属性（如left,top,width等）总是以像素值返回
+moveBy(dx,dy) 	将窗口从当前位置移动指定的距离，无返回值
+moveTo(x,y) 	将窗口移动到指定的位置，无返回值
+open(url,name,features) 	在name参数指定的窗口中显示url指定的文档。如果省略了name参数，或没有name参数指定的窗口，那么将创建一个新的窗口。features是可选参数，这是一个字符串，用于指定新窗口的大小和样式。字符串中，使用逗号分隔各个特性。所有的平台都支持的特性名称有：width=pixels,height=pixels,location,menubar,resizable,status和toolbar。在IE中，使用left=x和top=y设置窗口的位置；在Netscape中，使用screenX=x和screenY=y来设置窗口的位置。该方法返回现有窗口对象或新建窗口对象。
+print() 	打印文档内容，相当于用户点击了浏览器中的“打印”按钮，无返回值
+prompt(message,default) 	打开一个提示对话框，显示message指定的内容，并等待用户输入一段文字。default参数是可选参数，指定在输入框中最初显示的内容，返回值为字符串；如果输入框中没有字符，则返回空字符串；如果单击了“取消”按钮，则返回null值
+resizeBy(dw,dh) 	将窗口缩放到指定的大小，无返回值
+resizeTo(width,height) 	将窗口的大小修改为指定的宽度和高度
+scroll(x,y) 	将窗口的内容（文档）滚动到指定的坐标，无返回值。在JavaScript1.2后被scrollTo()方法替代
+scrollBy(dx,dy) 	将窗口的内容（文档）滚动到指定的量，无返回值
+scrollTo(x,y) 	将窗口的内容（文档）滚动到指定的位置，无返回值
+setInterval(code,interval,args...) 	每隔interval指定的毫秒数就执行一次code字符串指定的代码。IE5及以后的版本中，code参数可以用函数引用来代替字符串，此时，每隔interval指定的毫秒数就执行一次该函数。该方法返回一个内部的ID值，该值可以传递给clearInterval()方法来取消代码的周期执行
+setTimeout(code,delay) 	在延迟delay参数指定的毫秒数之后执行code字符串指定的代码。IE5及以后的版本中，code参数可以用函数引用来代替字符串，此时，延迟delay指定的毫秒数就执行一次该函数。该方法返回一个内部的ID值，该值可以传递给setTimeout()来取消延迟执行的代码。注意，该方法是立即返回，并不是在返回之前等待delay指定的毫秒数
+	open()方法的features参数指定一组定制新窗口特性的选项，其有效值如下表所示：
+选项名称 		可选值 		描述
+directories   	yes/no 或 1/0 	新窗口中是否显示“链接”按钮
+height 		整数值 		新窗口的高度
+width 		整数值 		新窗口的宽度
+location 		yes/no 或 1/0 	新窗口中是否显示地址栏
+menubar 		yes/no 或 1/0 	新窗口中是否显示菜单栏
+resizable 		yes/no 或 1/0 	新窗口是否允许用户改变大小
+scrollbars 	yes/no 或 1/0 	新窗口是否显示滚动条
+status 		yes/no 或 1/0 	新窗口是否显示状态栏
+toolbar 		yes/no 或 1/0 	新窗口是否显示工具栏
+</code></pre>
+<h2 id="9location"><a class="markdownIt-Anchor" href="#9location">#</a> 9.location</h2>
+<pre><code>location对象的属性：
+属性 		描述
+hash 		指定URL的锚地部分，包括前导符号（#），例如#result
+host 		指定URL的主机和端口号部分，例如www.demo.com:1234
+hostname 	指定URL的主机部分，例如www.demo.com
+href 		指定完整的URL，例如http://www.demo.com:1234/catalog/search.html?q=JavaScript&amp;t=10#result
+pathname 	指定URL的路径名称部分，例如/catalog/search.html
+port 		指定URL的端口号部分，例如1234
+protocol 		指定URL的协议部分，包括其后附带的冒号，例如http:
+search 		指定URL的查询部分，包括其前面的问号，例如?q=JavaScript&amp;t=10
+</code></pre>
+<h2 id="10location对象的方法"><a class="markdownIt-Anchor" href="#10location对象的方法">#</a> 10.location 对象的方法：</h2>
+<pre><code>方法 		描述
+reload(force) 	重新从缓冲区或服务器上读取页眉并在浏览器中显示。force参数是可选参数，其值为true时，强制完成加载，即使页面没有变化也加载
+replace(url) 	使用url指定的页面取代当前页面，但不在浏览历史中产生新的登记项，这是该方法与为href属性赋值的不同之处
+</code></pre>
+<h2 id="11histony"><a class="markdownIt-Anchor" href="#11histony">#</a> 11.histony</h2>
+<pre><code>history对象有三个方法，如下表所示：
+方法 	描述
+back() 	返回到用户刚刚访问过的页面，于浏览器的“后退”按钮功能相同
+forward() 	前进到浏览器访问历史中的前一个页面，于浏览器的“前进”按钮功能相同
+go(n) 	跳转到相对于当前页面的第n个URL表示的页面。正值表示前进，负值表示后退。go(-1)的功能等价于back()
+document.write(history.length);用于得到浏览器访问历史记录中的URL数量
+&lt;a href=&quot;javascript:window.history.go(-1);return false;&quot; /&gt;返回上一页&lt;/a&gt;
+</code></pre>
+<h2 id="12document对象的属性和方法"><a class="markdownIt-Anchor" href="#12document对象的属性和方法">#</a> 12.document 对象的属性和方法</h2>
+<pre><code>属性 		描述
+anchors[] 	anchor对象数组，每一个都代表文档中出现的一个锚地
+applets[] 		applet对象数组，代表文档中出现的每一个applet片段
+bgColor 		指定文档的背景颜色，字符串类型
+cookies 		允许读写HTTP的cookie，字符串类型
+domain 		指定文档来自哪一个域，用于安全目的，字符串类型
+embeds[] 	代表文档中使用&lt;embed&gt;标记嵌入的数据，于plugins[]意义相同
+fgColor 		指定文档的前景颜色，字符串类型
+forms[] 		form对象数组，每一个元素对应于文档中的一个HTML &lt;form&gt;标记
+images[] 		image对象数组，每一个元素对应于文档中的一个HTML&lt;img&gt;标记
+lastModified 	给出文档的最近修改时间（有web服务器报告），字符串类型，只读属性
+linkColor 		指定未访问连接的颜色
+links[] 		link对象数组，每一个元素对应于文档中的一个HTML &lt;a href&gt;标记
+location 		文档的URL地址，该属性已废弃，应该使用URL属性来替代它
+plugins[] 		与embeds[]属性的意义相同
+referrer 		只读属性，连接到当前文档的URL
+title 		文档的标题，对应于文档中的&lt;title&gt;标记的内容
+URL 		指定当前文档的URL，只读属性
+vlinkColor 	指定已访问链接的颜色
+</code></pre>
+<h2 id="13text树"><a class="markdownIt-Anchor" href="#13text树">#</a> 13.Text 树</h2>
+<pre><code>document.createTextNode(&quot;&lt;a&gt;&lt;/a&gt;&quot;)创建节点
+	element属性
+appendData(text)：将text添加到节点的末尾。
+deleteData(offset,count)：从offset开始的位置删除count个字符。
+insertData(offset,text)：从offset指定的位置插入text。
+replaceData(offset,count,text)：用text替换从offset指定的位置开始到offset+count为止处的文本。
+splitText(offset)：从offset指定的位置将当前文本节点分成两个文本节点。
+substringData(offset,count)：提取从offset指定的位置开始到offset+count为止处的字符串。
+</code></pre>
+<h2 id="14表格操作"><a class="markdownIt-Anchor" href="#14表格操作">#</a> 14. 表格操作</h2>
+<pre><code>表格的&lt;table&gt;元素的属性和方法有：
+    caption：保存&lt;caption&gt;元素的引用的指针。
+    tBodies：是一个&lt;tbody&gt;元素的HTMLCollection。
+    tFoot：保存&lt;tfoot&gt;元素的引用的指针。
+    tHead：保存&lt;thead&gt;元素的引用的指针。
+    rows：是表格中所有行的HTMLCollection。
+    createTHead()：创建&lt;thead&gt;元素，将它放入表格中，并返回其引用。
+    createTFoot()：创建&lt;tfoot&gt;元素，将它放入表格中，并返回其引用。
+    createCaption()：创建&lt;caption&gt;元素，将它放入表格中，并返回其引用。
+    deleteTHead()：删除&lt;thead&gt;元素。
+    deleteTFoot()：删除&lt;tfoot&gt;元素
+    deleteCaption()：删除&lt;caption&gt;元素
+    deleteRow(pos)：删除指定位置的表格行。
+    insertRow(pos)：向rows集合中指定位置插入一行。
+表格的&lt;tbody&gt;元素的属性和方法有：
+    rows：保存着&lt;tbody&gt;元素中行的HTMLCollection。
+    deleteRow(pos)：删除指定位置的表格行。
+    insertRow(pos)：向rows集合中指定位置插入一行。
+表格的&lt;tr&gt;元素的属性和方法有：
+    cells：保存着&lt;tr&gt;元素中单元格的HTMLCollection。
+    deleteCell(pos)：删除指定位置的单元格。
+    insertCell(pos)：向cells集合中指定位置插入一个单元格，并返回新插入单元格的引用。
+</code></pre>
+<h2 id="15event属性和方法"><a class="markdownIt-Anchor" href="#15event属性和方法">#</a> 15.event 属性和方法</h2>
+<pre><code>属性/方法 	类型 		读 / 写 	描述
+bubbles 		Boolean 		只读 	事件是否冒泡
+cancelable 	Boolean 		只读 	是否可以取消事件的默认行为
+curentTarget 	Element 		只读 	当前正在处理事件的事件处理程序的元素
+detail 		Integer 		只读 	与事件相关的细节信息
+eventPhase 	Integer 		只读 	调用事件处理程序的阶段：1表示捕获阶段，2表示“处于目标”阶段，3表示冒泡阶段
+preventDefault() 	Function 		只读 	取消事件的默认行为
+stopPropagation() 	Function 		只读 	取消事件的进一步捕获或冒泡。如果bubbles为true则可以使用该方法
+target 		Element 		只读 	事件的目标
+type 		String 		只读 	被触发事件的类型
+view 		AbstractView 	只读 	与事件关联的抽象视图。等同于发生事件的window对象
+</code></pre>
+
+      <div class="tags">
+          <a href="/tags/ES6/" rel="tag"><i class="ic i-tag"></i> ES6</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2020-12-09 11:30:45" itemprop="dateModified" datetime="2020-12-09T11:30:45+08:00">2020-12-09</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="高祥 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="高祥 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="高祥 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>高祥君 <i class="ic i-at"><em>@</em></i>主人
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2017/10/09/JavaScript%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/" title="JavaScript常用方法总结（前端的必须好好看看）">http://example.com/2017/10/09/JavaScript常用方法总结/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2017/10/09/vuex%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxp31goj20zk0m8qv5.jpg" title="Vue常用各种插件详细安装步骤（不收藏就找不到了！）">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 总结</span>
+  <h3>Vue常用各种插件详细安装步骤（不收藏就找不到了！）</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text"> 1. 类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E6%95%B0%E7%BB%84"><span class="toc-number">2.</span> <span class="toc-text"> 2. 数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3math"><span class="toc-number">3.</span> <span class="toc-text"> 3.			Math</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.</span> <span class="toc-text"> 4.			字符串</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5string%E5%AF%B9%E8%B1%A1"><span class="toc-number">5.</span> <span class="toc-text"> 5.String 对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E6%B5%8F%E8%A7%88%E5%99%A8%E5%B1%9E%E6%80%A7"><span class="toc-number">6.</span> <span class="toc-text"> 6. 浏览器属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7window"><span class="toc-number">7.</span> <span class="toc-text"> 7.Window</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8window%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">8.</span> <span class="toc-text"> 8.window 对象的方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9location"><span class="toc-number">9.</span> <span class="toc-text"> 9.location</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10location%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95"><span class="toc-number">10.</span> <span class="toc-text"> 10.location 对象的方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11histony"><span class="toc-number">11.</span> <span class="toc-text"> 11.histony</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12document%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">12.</span> <span class="toc-text"> 12.document 对象的属性和方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13text%E6%A0%91"><span class="toc-number">13.</span> <span class="toc-text"> 13.Text 树</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14%E8%A1%A8%E6%A0%BC%E6%93%8D%E4%BD%9C"><span class="toc-number">14.</span> <span class="toc-text"> 14. 表格操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15event%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">15.</span> <span class="toc-text"> 15.event 属性和方法</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2017/10/09/Es6/" rel="bookmark" title="ES6(这是我见过写的最好的)!推荐">ES6(这是我见过写的最好的)!推荐</a></li><li><a href="/2017/10/09/ajax%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/" rel="bookmark" title="Ajax详细获取数据(不会的转行吧！)">Ajax详细获取数据(不会的转行吧！)</a></li><li><a href="/2017/10/09/vuex%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85/" rel="bookmark" title="Vue常用各种插件详细安装步骤（不收藏就找不到了！）">Vue常用各种插件详细安装步骤（不收藏就找不到了！）</a></li><li class="active"><a href="/2017/10/09/JavaScript%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/" rel="bookmark" title="JavaScript常用方法总结（前端的必须好好看看）">JavaScript常用方法总结（前端的必须好好看看）</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="高祥"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">高祥</p>
+  <div class="description" itemprop="description">前端高级工程师欢迎你</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">4</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">1</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">2</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tLzIzMjE4NzM3NjI=" title="https:&#x2F;&#x2F;github.com&#x2F;2321873762"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnlvdXJuYW1lQG1haWwuY29t" title="mailto:yourname@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/vuex%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85/" title="Vue常用各种插件详细安装步骤（不收藏就找不到了！）">Vue常用各种插件详细安装步骤（不收藏就找不到了！）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/ajax%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/" title="Ajax详细获取数据(不会的转行吧！)">Ajax详细获取数据(不会的转行吧！)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/JavaScript%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/" title="JavaScript常用方法总结（前端的必须好好看看）">JavaScript常用方法总结（前端的必须好好看看）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/Es6/" title="ES6(这是我见过写的最好的)!推荐">ES6(这是我见过写的最好的)!推荐</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2020</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">高祥 @ GX</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2017/10/09/JavaScript常用方法总结/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 高祥的 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
