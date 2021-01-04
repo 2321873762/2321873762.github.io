@@ -1,0 +1,560 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="主人" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="主人" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="主人" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="Vue" />
+
+
+<link rel="canonical" href="http://example.com/2017/10/09/px%E8%87%AA%E5%8A%A8%E8%BD%ACrem/">
+
+
+
+  <title>
+px自动转rem - Vue |
+GX = 主人 = 前端工程师</title>
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">px自动转rem
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2017-10-09 19:11:58">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2017-10-09T19:11:58+08:00">2017-10-09</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">GX</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitzannuj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclhnx9glj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicitht3xtj20zk0m8k5v.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Vue/" itemprop="item" rel="index" title="分类于 Vue"><span itemprop="name">Vue</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2017/10/09/px%E8%87%AA%E5%8A%A8%E8%BD%ACrem/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="高祥">
+    <meta itemprop="description" content="前端工程师, 前端高级工程师欢迎你">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="主人">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="首先下载-cnpm-install-lib-flexible-postcss-plugin-px2rem-save-dev"><a class="markdownIt-Anchor" href="#首先下载-cnpm-install-lib-flexible-postcss-plugin-px2rem-save-dev">#</a> 首先下载 cnpm install lib-flexible postcss-plugin-px2rem --save-dev</h1>
+<h1 id="完成下载之后"><a class="markdownIt-Anchor" href="#完成下载之后">#</a> 完成下载之后</h1>
+<pre><code>main.js 导入： import ‘lib-flexible/flexible’;
+</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在vue.config中添加</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">   </span><br><span class="line">    css: &#123;</span><br><span class="line">        loaderOptions: &#123;</span><br><span class="line">            postcss: &#123;</span><br><span class="line">                plugins: [</span><br><span class="line">                    <span class="built_in">require</span>(<span class="string">&#x27;postcss-plugin-px2rem&#x27;</span>)(&#123;</span><br><span class="line">                        rootValue:<span class="number">75</span>, <span class="comment">//换算基数， 默认100  ，这样的话把根标签的字体规定为1rem为50px,这样就可以从设计稿上量出多少个px直接在代码中写多上px了。</span></span><br><span class="line">                        <span class="comment">// unitPrecision: 5, //允许REM单位增长到的十进制数字。</span></span><br><span class="line">                        <span class="comment">//propWhiteList: [],  //默认值是一个空数组，这意味着禁用白名单并启用所有属性。</span></span><br><span class="line">                        <span class="comment">// propBlackList: [], //黑名单</span></span><br><span class="line">                        <span class="comment">// exclude: /(page_pc)/i,  //默认false，可以（reg）利用正则表达式排除某些文件夹的方法，例如/(node_module)/ 。如果想把前端UI框架内的px也转换成rem，请把此属性设为默认值</span></span><br><span class="line">                        exclude: <span class="regexp">/node_modules/i</span>,</span><br><span class="line">                        <span class="comment">// selectorBlackList: [&#x27;van-&#x27;], //要忽略并保留为px的选择器,我们一般不转换vantui中的大小</span></span><br><span class="line">                        <span class="comment">// ignoreIdentifier: false,  //（boolean/string）忽略单个属性的方法，启用ignoreidentifier后，replace将自动设置为true。</span></span><br><span class="line">                        <span class="comment">// replace: true, // （布尔值）替换包含REM的规则，而不是添加回退。</span></span><br><span class="line">                        mediaQuery: <span class="literal">false</span>,  <span class="comment">//（布尔值）允许在媒体查询中转换px。</span></span><br><span class="line">                        minPixelValue: <span class="number">3</span> <span class="comment">//设置要替换的最小像素值(3px会被转rem)。 默认 0</span></span><br><span class="line">                    &#125;),</span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>已完成</p>
+<hr/>
+<h1 id="vue中配置多环境变量"><a class="markdownIt-Anchor" href="#vue中配置多环境变量">#</a> vue 中配置多环境变量</h1>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在package.json文件中添加</span></span><br><span class="line">	<span class="string">&quot;serve&quot;</span>: <span class="string">&quot;vue-cli-service serve&quot;</span>,  </span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;vue-cli-service build&quot;</span>,</span><br><span class="line">    <span class="string">&quot;stage&quot;</span>: <span class="string">&quot;vue-cli-service build --mode staging&quot;</span>,</span><br><span class="line">    <span class="string">&quot;lint&quot;</span>: <span class="string">&quot;vue-cli-service lint&quot;</span></span><br></pre></td></tr></table></figure>
+<pre><code>1.在根目录下创建
+	.env.development
+	.env.production
+	.env.staging
+    对应的分别是开发模式，生产模式，测试模式
+2.在src中创建一个config文件夹里面创建
+	index.js
+	env.development.js
+	env.production.js
+	env.staging.js
+</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.env等文件夹中写入</span></span><br><span class="line"><span class="comment">//开发模式</span></span><br><span class="line">NODE_ENV=<span class="string">&#x27;development&#x27;</span></span><br><span class="line"># must start with VUE_APP_ </span><br><span class="line">VUE_APP_ENV = <span class="string">&#x27;development&#x27;</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">//生产模式</span></span><br><span class="line">NODE_ENV=<span class="string">&#x27;production&#x27;</span></span><br><span class="line"># must start with VUE_APP_</span><br><span class="line">VUE_APP_ENV = <span class="string">&#x27;production&#x27;</span></span><br><span class="line"> </span><br><span class="line"> <span class="comment">//测试模式</span></span><br><span class="line"> NODE_ENV=<span class="string">&#x27;production&#x27;</span></span><br><span class="line"># must start with VUE_APP_</span><br><span class="line">VUE_APP_ENV = <span class="string">&#x27;staging&#x27;</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//config等env文件中</span></span><br><span class="line"><span class="comment">// 本地环境配置</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  title: <span class="string">&#x27;vue-h5-template&#x27;</span>,</span><br><span class="line">  baseUrl: <span class="string">&#x27;https://www.365msmk.com/api&#x27;</span>, <span class="comment">// 项目地址</span></span><br><span class="line">  baseApi: <span class="string">&#x27;https://test.xxx.com/api&#x27;</span>, <span class="comment">// 本地api请求地址,注意：如果你使用了代理，请设置成&#x27;/&#x27;</span></span><br><span class="line">  APPID: <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">  APPSECRET: <span class="string">&#x27;xxx&#x27;</span>,</span><br><span class="line">  $cdn: <span class="string">&#x27;https://gimg2.baidu.com&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//在axios中添加</span></span><br><span class="line"><span class="keyword">import</span> &#123; baseUrl &#125; <span class="keyword">from</span> <span class="string">&#x27;../config&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(baseUrl)</span><br><span class="line"><span class="keyword">const</span> instance = axios.create(&#123;</span><br><span class="line">  baseURL: baseUrl,</span><br><span class="line">  timeout: <span class="number">5000</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+      <div class="tags">
+          <a href="/tags/Vue/" rel="tag"><i class="ic i-tag"></i> Vue</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-01-04 21:15:17" itemprop="dateModified" datetime="2021-01-04T21:15:17+08:00">2021-01-04</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="高祥 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="高祥 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="高祥 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>高祥君 <i class="ic i-at"><em>@</em></i>主人
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2017/10/09/px%E8%87%AA%E5%8A%A8%E8%BD%ACrem/" title="px自动转rem">http://example.com/2017/10/09/px自动转rem/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2017/10/09/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E5%B7%A6%E5%8F%B3%E4%B8%8D%E4%BA%92%E7%9B%B8%E5%BD%B1%E5%93%8D/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeu1usa7j20zk0m8b29.jpg" title="小程序分类页面左右不互相影响">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 小程序</span>
+  <h3>小程序分类页面左右不互相影响</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2017/10/09/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipewkhf1zj20zk0m81kx.jpg" title="项目开发流程">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 总结</span>
+  <h3>项目开发流程</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E4%B8%8B%E8%BD%BD-cnpm-install-lib-flexible-postcss-plugin-px2rem-save-dev"><span class="toc-number">1.</span> <span class="toc-text"> 首先下载 cnpm install lib-flexible postcss-plugin-px2rem --save-dev</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%8C%E6%88%90%E4%B8%8B%E8%BD%BD%E4%B9%8B%E5%90%8E"><span class="toc-number">2.</span> <span class="toc-text"> 完成下载之后</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#vue%E4%B8%AD%E9%85%8D%E7%BD%AE%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-number">3.</span> <span class="toc-text"> vue 中配置多环境变量</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2017/10/09/vuex%E9%AB%98%E7%BA%A7%E8%AF%AD%E6%B3%95/" rel="bookmark" title="Vuex高级语法">Vuex高级语法</a></li><li class="active"><a href="/2017/10/09/px%E8%87%AA%E5%8A%A8%E8%BD%ACrem/" rel="bookmark" title="px自动转rem">px自动转rem</a></li><li><a href="/2017/10/09/%E7%BB%86%E8%AF%B4%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/" rel="bookmark" title="细说节流和防抖">细说节流和防抖</a></li><li><a href="/2017/10/09/element-ui%E5%AE%9E%E7%8E%B0%E5%88%86%E9%A1%B5%E6%95%88%E6%9E%9C/" rel="bookmark" title="element-ui实现分页效果">element-ui实现分页效果</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="高祥"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">高祥</p>
+  <div class="description" itemprop="description">前端高级工程师欢迎你</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">30</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">6</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">12</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tLzIzMjE4NzM3NjI=" title="https:&#x2F;&#x2F;github.com&#x2F;2321873762"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnlvdXJuYW1lQG1haWwuY29t" title="mailto:yourname@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2017/10/09/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%86%E7%B1%BB%E9%A1%B5%E9%9D%A2%E5%B7%A6%E5%8F%B3%E4%B8%8D%E4%BA%92%E7%9B%B8%E5%BD%B1%E5%93%8D/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2017/10/09/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="分类于 服务器">服务器</a>
+</div>
+
+    <span><a href="/2017/10/09/ajax%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE/" title="Ajax详细获取数据(不会的转行吧！)">Ajax详细获取数据(不会的转行吧！)</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/Vue%E5%B8%B8%E7%94%A8%E5%90%84%E7%A7%8D%E6%8F%92%E4%BB%B6%E8%AF%A6%E7%BB%86%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/" title="Vue常用各种插件详细安装步骤（不收藏就找不到了！）">Vue常用各种插件详细安装步骤（不收藏就找不到了！）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Vue/" title="分类于 Vue">Vue</a>
+</div>
+
+    <span><a href="/2017/10/09/element-ui%E5%AE%9E%E7%8E%B0%E5%88%86%E9%A1%B5%E6%95%88%E6%9E%9C/" title="element-ui实现分页效果">element-ui实现分页效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" title="移动端面试题">移动端面试题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" title="分类于 小程序">小程序</a>
+</div>
+
+    <span><a href="/2017/10/09/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/" title="微信小程序回到顶部">微信小程序回到顶部</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/node/" title="分类于 node">node</a>
+</div>
+
+    <span><a href="/2017/10/09/node%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/" title="node常见面试题库">node常见面试题库</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%B8%B8%E7%94%A8/" title="分类于 常用">常用</a>
+</div>
+
+    <span><a href="/2017/10/09/%E5%85%AB%E5%8D%A6%E9%98%B5/" title="八卦阵">八卦阵</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Vue/" title="分类于 Vue">Vue</a>
+</div>
+
+    <span><a href="/2017/10/09/%E7%BB%86%E8%AF%B4%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/" title="细说节流和防抖">细说节流和防抖</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" title="分类于 服务器">服务器</a>
+</div>
+
+    <span><a href="/2017/10/09/Git%E9%A1%B9%E7%9B%AE%E4%B8%8A%E4%BC%A0/" title="Git项目上传">Git项目上传</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/Jquery%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/" title="jQuery常用方法总结（前端的必须好好看看）">jQuery常用方法总结（前端的必须好好看看）</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">高祥 @ GX</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2017/10/09/px自动转rem/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 高祥的 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

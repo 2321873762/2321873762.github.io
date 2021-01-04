@@ -1,0 +1,816 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="主人" href="http://example.com/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="主人" href="http://example.com/atom.xml" />
+<link rel="alternate" type="application/json" title="主人" href="http://example.com/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="ES6,node" />
+
+
+<link rel="canonical" href="http://example.com/2017/10/09/node%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/">
+
+
+
+  <title>
+node常见面试题库 - node |
+GX = 主人 = 前端工程师</title>
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">node常见面试题库
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2017-10-09 19:11:58">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2017-10-09T19:11:58+08:00">2017-10-09</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">GX</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclwrdwyaj20zk0m8are.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipexoj0moj20zk0m8kgu.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclip4jbpj20zk0m87cv.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/node/" itemprop="item" rel="index" title="分类于 node"><span itemprop="name">node</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://example.com/2017/10/09/node%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="高祥">
+    <meta itemprop="description" content="前端工程师, 前端高级工程师欢迎你">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="主人">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h2 id="1-检测系统中node版本号的指令是"><a class="markdownIt-Anchor" href="#1-检测系统中node版本号的指令是">#</a> 1、检测系统中 node 版本号的指令是？</h2>
+<pre><code>node -v
+</code></pre>
+<h2 id="2-如何退出node执行环境repl环境"><a class="markdownIt-Anchor" href="#2-如何退出node执行环境repl环境">#</a> 2、如何退出 node 执行环境（REPL 环境）？</h2>
+<pre><code> ctrl+c c
+</code></pre>
+<h2 id="3-node如何创建服务器写出代码"><a class="markdownIt-Anchor" href="#3-node如何创建服务器写出代码">#</a> 3、node 如何创建服务器，写出代码？</h2>
+<pre><code> var http=require(‘http’);
+var server=http.createServer(function(req,res,next)&#123;
+     //业务逻辑      &#125;)
+server.listen(3000,function(err)&#123;if(!err)&#123;console.log(‘服务器运行在3000端口上’)&#125;&#125;)
+</code></pre>
+<h2 id="4-httpcreateserverfunctionreqres-获取请求-在如上函数中如何获取前端请求地址"><a class="markdownIt-Anchor" href="#4-httpcreateserverfunctionreqres-获取请求-在如上函数中如何获取前端请求地址">#</a> 4、http.createServer (function (req,res){   //  获取请求          }) 在如上函数中如何获取前端请求地址？</h2>
+<pre><code>  req.url
+</code></pre>
+<h2 id="5-reqres分别代表什么"><a class="markdownIt-Anchor" href="#5-reqres分别代表什么">#</a> 5、req,res 分别代表什么？</h2>
+<pre><code> req:全称request请求对象
+ res:全称 response响应对象
+</code></pre>
+<h2 id="6如何向客户端浏览器响应hello-world"><a class="markdownIt-Anchor" href="#6如何向客户端浏览器响应hello-world">#</a> 6. 如何向客户端浏览器响应‘hello world’？</h2>
+<pre><code>res.write(‘hello world’);
+res.end()
+</code></pre>
+<h2 id="7浏览器请求-faviconico表示什么如何做出响应"><a class="markdownIt-Anchor" href="#7浏览器请求-faviconico表示什么如何做出响应">#</a> 7. 浏览器请求 ‘/favicon.ico’表示什么？如何做出响应？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  	表示浏览器（客户端）请求页面图标</span><br><span class="line"></span><br><span class="line">   <span class="keyword">if</span>(req.url==’/favicon.ico’)&#123;</span><br><span class="line">fs.readFile(‘图标地址’,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">       res.write(data);</span><br><span class="line">        res.end()</span><br><span class="line">&#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="8-如何加载fs模块"><a class="markdownIt-Anchor" href="#8-如何加载fs模块">#</a> 8、如何加载 fs 模块？</h2>
+<pre><code>  var fs=require(“fs”);
+</code></pre>
+<h2 id="9-fs模块如何异步读取一个文件文件路径为filejson"><a class="markdownIt-Anchor" href="#9-fs模块如何异步读取一个文件文件路径为filejson">#</a> 9、fs 模块如何异步读取一个文件 (文件路径为：’./file.json’)？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(‘./file.json’,’utf-<span class="number">8</span>’,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;  </span><br><span class="line">   <span class="function"><span class="title">If</span>(<span class="params">!err</span>)</span>&#123;</span><br><span class="line">     <span class="comment">// data即为读取内容</span></span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="10-fs如何同步读取文件文件的路径为filejson"><a class="markdownIt-Anchor" href="#10-fs如何同步读取文件文件的路径为filejson">#</a> 10、fs 如何同步读取文件（文件的路径为：‘./file.json’）？</h2>
+<pre><code>fs.readFileSync(‘’./file.json”,”utf-8”);
+</code></pre>
+<h2 id="11-同步和异步的区别各举一个js中同步和异步的案例"><a class="markdownIt-Anchor" href="#11-同步和异步的区别各举一个js中同步和异步的案例">#</a> 11、同步和异步的区别？各举一个 Js 中同步和异步的案例？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">异步：在一件事情没有做完，可以接着做另外一件事  非阻塞</span><br><span class="line">同步：一件事情没有做完，就不可以做下一件事    阻塞。</span><br><span class="line">同步案例：<span class="keyword">for</span>循环语句，alert() 等 </span><br><span class="line"> 异步案例：定时器，ajax异步请求</span><br></pre></td></tr></table></figure>
+<h2 id="12-fs如何异步写入文件写入内容为abc写入文件路径为filetxt"><a class="markdownIt-Anchor" href="#12-fs如何异步写入文件写入内容为abc写入文件路径为filetxt">#</a> 12、fs 如何异步写入文件，写入内容为‘abc’, 写入文件路径为’./file.txt’？</h2>
+<pre><code>	fs.writeFile(‘./file.txt’,’abc’,function(err)&#123;   &#125;)
+</code></pre>
+<h2 id="13-写出注册的form表单提交地址为apilogin提交方式为get用户名字段为user密码字段为pass"><a class="markdownIt-Anchor" href="#13-写出注册的form表单提交地址为apilogin提交方式为get用户名字段为user密码字段为pass">#</a> 13、写出注册的 form 表单，提交地址为’/api/login’, 提交方式为’get’, 用户名字段为 user, 密码字段为 pass？</h2>
+<pre><code> &lt;form  action=”/api/login” method=’get’&gt;
+
+     用户名：&lt;input type=’text’ name=”user”/&gt;
+    密码：&lt;input type=’password’ user=”pass”&gt;
+
+      &lt;button type=’submit’ &gt;注册&lt;/button&gt;
+ &lt;/form&gt;
+</code></pre>
+<h2 id="14-querystring模块如何解析如下字符串usertompass123456"><a class="markdownIt-Anchor" href="#14-querystring模块如何解析如下字符串usertompass123456">#</a> 14、querystring 模块如何解析如下字符串，（‘user=tom&amp;pass=123456’）？</h2>
+<pre><code> querystring.parse(‘user=tom?pass=123456’)
+</code></pre>
+<h2 id="15-url模块如何解析请求地址requrl-得到如下参数pathanemqueryuserxxxpassxxxx"><a class="markdownIt-Anchor" href="#15-url模块如何解析请求地址requrl-得到如下参数pathanemqueryuserxxxpassxxxx">#</a> 15、url 模块如何解析请求地址 req.url, 得到如下参数 {pathanem:’/’,query:{user:xxx,pass:xxxx}} ？</h2>
+<pre><code>	url.parse(req.url,true)
+</code></pre>
+<h2 id="16-node服务器如何设置跨域请求和中文乱码"><a class="markdownIt-Anchor" href="#16-node服务器如何设置跨域请求和中文乱码">#</a> 16、node 服务器如何设置跨域请求和中文乱码？</h2>
+<pre><code> res.writeHead(200, &#123;
+    'Content-Type': 'application/json;charset=utf-8',
+    'Access-Control-Allow-Origin': '*'
+  &#125;)
+</code></pre>
+<h2 id="17-npm是什么"><a class="markdownIt-Anchor" href="#17-npm是什么">#</a> 17、npm 是什么？</h2>
+<pre><code>   npm是包管理工具
+</code></pre>
+<h2 id="18-npm如何下载-jquery"><a class="markdownIt-Anchor" href="#18-npm如何下载-jquery">#</a> 18、npm 如何下载 jquery？</h2>
+<pre><code>npm install jquery@版本号   或者  npm install jquery
+</code></pre>
+<h2 id="19-npm工具下载的包放在哪个文件夹里"><a class="markdownIt-Anchor" href="#19-npm工具下载的包放在哪个文件夹里">#</a> 19、npm 工具下载的包放在哪个文件夹里？</h2>
+<pre><code>  	node_modules
+</code></pre>
+<h2 id="20-npm如何创建packagejson"><a class="markdownIt-Anchor" href="#20-npm如何创建packagejson">#</a> 20、npm 如何创建 package.json？</h2>
+<pre><code> npm init
+</code></pre>
+<h2 id="21-cnpm-和npm的区别我们下载插件一般用哪个"><a class="markdownIt-Anchor" href="#21-cnpm-和npm的区别我们下载插件一般用哪个">#</a> 21、cnpm 和 npm 的区别？我们下载插件一般用哪个？</h2>
+<pre><code>  npm 下载资源服务器在国外，cnpm下载资源服务器为国内淘宝镜像 。 一般下载用cnpm
+</code></pre>
+<h2 id="22-commonjs规范如何导出一个模块"><a class="markdownIt-Anchor" href="#22-commonjs规范如何导出一个模块">#</a> 22 、commonjs 规范，如何导出一个模块？</h2>
+<pre><code>	module.exports=&#123;&#125;
+</code></pre>
+<h2 id="23-commonjs规范如何导入一个模块"><a class="markdownIt-Anchor" href="#23-commonjs规范如何导入一个模块">#</a> 23、commonjs 规范，如何导入一个模块？</h2>
+<pre><code>var module=require(‘模块名或路径’)
+</code></pre>
+<h2 id="24-自己仿写url模块能把apiusertompass12345解析成对象pathnameapiqueryusertompass12345遵循commenjs规范"><a class="markdownIt-Anchor" href="#24-自己仿写url模块能把apiusertompass12345解析成对象pathnameapiqueryusertompass12345遵循commenjs规范">#</a> 24、自己仿写 url 模块（能把’/api?user=tom&amp;pass=12345’解析成对象 {pathname:’/api’,query:{user:’tom’,pass:12345}}），遵循 commenjs 规范？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports=&#123;</span><br><span class="line">parse:<span class="function"><span class="keyword">function</span>(<span class="params">str,foo</span>)</span>&#123;</span><br><span class="line"><span class="keyword">var</span> arr=str.split(<span class="string">&#x27;?&#x27;</span>); </span><br><span class="line"><span class="keyword">var</span> pathname=arr[<span class="number">0</span>]</span><br><span class="line"><span class="keyword">if</span>(foo)&#123;</span><br><span class="line"><span class="keyword">var</span> arr1=arr[<span class="number">1</span>].split(<span class="string">&#x27;&amp;&#x27;</span>); </span><br><span class="line"><span class="keyword">var</span> query=&#123;&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr1.length;i++)&#123;</span><br><span class="line"><span class="keyword">var</span> arr2=arr1[i].split(<span class="string">&#x27;=&#x27;</span>); </span><br><span class="line">query[arr2[<span class="number">0</span>]]=arr2[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"><span class="keyword">var</span> query=arr[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> &#123;<span class="attr">pathanme</span>:pathname,<span class="attr">query</span>:query&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="25-npm包的发布流程"><a class="markdownIt-Anchor" href="#25-npm包的发布流程">#</a> 25、npm 包的发布流程？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>npm login  登录</span><br><span class="line">   username：用户名</span><br><span class="line">   password:密码</span><br><span class="line">   email:邮箱</span><br><span class="line"><span class="number">2.</span>npm publish  发布</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="26-node服务器如何接受post请求"><a class="markdownIt-Anchor" href="#26-node服务器如何接受post请求">#</a> 26、node 服务器如何接受 post 请求？</h2>
+<pre><code>  var str=””
+   req.on(‘data’,function(thunk)&#123;
+           str+=thunk;
+&#125;)
+   req.on(‘end’,function()&#123;
+&#125;)
+</code></pre>
+<h2 id="27get与post区别"><a class="markdownIt-Anchor" href="#27get与post区别">#</a> 27.get 与 post 区别？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">历史	参数保留在浏览器历史中。	参数不会保存在浏览器历史中。</span><br><span class="line">对数据长度的限制	是的。当发送数据时，GET 方法向 URL 添加数据；URL 的长度是受限制的（URL 的最大长度是 <span class="number">2048</span> 个字符）。	无限制。</span><br><span class="line">安全性	与 POST 相比，GET 的安全性较差，因为所发送的数据是 URL 的一部分。</span><br><span class="line">在发送密码或其他敏感信息时绝不要使用 GET ！	POST 比 GET 更安全，因为参数不会被保存在浏览器历史或 web 服务器日志中。</span><br><span class="line">可见性	数据在 URL 中对所有人都是可见的。	数据不会显示在 URL 中。</span><br><span class="line"></span><br><span class="line"><span class="number">1.</span> get是从服务器上获取数据，post是向服务器传送数据。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> GET请求把参数包含在URL中，将请求信息放在URL后面，POST请求通过request body传递参数，将请求信息放置在报文体中。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> get传送的数据量较小，不能大于2KB。post传送的数据量较大，一般被默认为不受限制。但理论上，IIS4中最大量为80KB，IIS5中为100KB。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> get安全性非常低，get设计成传输数据，一般都在地址栏里面可以看到，post安全性较高，post传递数据比较隐私，所以在地址栏看不到， 如果没有加密，他们安全级别都是一样的，随便一个监听器都可以把所有的数据监听到。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">5.</span> GET请求能够被缓存，GET请求会保存在浏览器的浏览记录中，以GET请求的URL能够保存为浏览器书签，post请求不具有这些功能。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">6.</span> HTTP的底层是TCP/IP，GET和POST的底层也是TCP/IP，也就是说，GET/POST都是TCP链接。GET和POST能做的事情是一样一样的。你要给GET加上request body，给POST带上url参数，技术上是完全行的通的。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">7.</span>GET产生一个TCP数据包，对于GET方式的请求，浏览器会把http header和data一并发送出去，服务器响应<span class="number">200</span>（返回数据）；POST产生两个TCP数据包，对于POST，浏览器先发送header，服务器响应<span class="number">100</span> <span class="keyword">continue</span>，浏览器再发送data，服务器响应<span class="number">200</span> ok（返回数据），并不是所有浏览器都会在POST中发送两次包，Firefox就只发送一次。</span><br></pre></td></tr></table></figure>
+<h2 id="28-express搭建服务器完成案例注意视图文件的配置视图文件引擎的配置静态资源文件的配置录屏"><a class="markdownIt-Anchor" href="#28-express搭建服务器完成案例注意视图文件的配置视图文件引擎的配置静态资源文件的配置录屏">#</a> 28、express 搭建服务器完成案例（注意：视图文件的配置，视图文件引擎的配置，静态资源文件的配置）（录屏）？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">一．首先创建app.js文件如下：</span><br><span class="line"><span class="comment">//加载express模块</span></span><br><span class="line"><span class="keyword">var</span> express=<span class="built_in">require</span>(<span class="string">&quot;express&quot;</span>); </span><br><span class="line"><span class="comment">// 创建app服务器 等同于 http.createServer()</span></span><br><span class="line"><span class="keyword">var</span> app=express();</span><br><span class="line"><span class="comment">//加载路由模块</span></span><br><span class="line"><span class="keyword">var</span> IndexRouter=<span class="built_in">require</span>(<span class="string">&#x27;./routes/index.js&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> RouterHome=<span class="built_in">require</span>(<span class="string">&#x27;./routes/home.js&#x27;</span>)</span><br><span class="line"><span class="comment">//导入path模块（处理路径的模块）</span></span><br><span class="line"><span class="keyword">var</span> path=<span class="built_in">require</span>(<span class="string">&quot;path&quot;</span>);</span><br><span class="line"><span class="comment">//加载ejs模板</span></span><br><span class="line"><span class="keyword">var</span> ejs=<span class="built_in">require</span>(<span class="string">&quot;ejs&quot;</span>);</span><br><span class="line"><span class="comment">//配置 视图文件位置</span></span><br><span class="line">app.set(<span class="string">&quot;views&quot;</span>,path.join(__dirname,<span class="string">&quot;views&quot;</span>));</span><br><span class="line"><span class="comment">//配置 视图文件引擎</span></span><br><span class="line">app.set(<span class="string">&#x27;view engine&#x27;</span>,<span class="string">&#x27;ejs&#x27;</span>)</span><br><span class="line"><span class="comment">//设置静态资源文件位置</span></span><br><span class="line">app.use(<span class="string">&#x27;/public&#x27;</span>,express.static(path.join(__dirname,<span class="string">&#x27;public&#x27;</span>)))</span><br><span class="line"><span class="comment">//指定ip或域名 （本地ip:127.0.0.1等同于本地域名localhost）</span></span><br><span class="line"><span class="keyword">var</span> ip=<span class="string">&#x27;127.0.0.1&#x27;</span>;</span><br><span class="line"><span class="comment">//指定端口</span></span><br><span class="line"><span class="keyword">var</span> port=<span class="number">3000</span>; </span><br><span class="line"><span class="comment">//app服务器监听端口</span></span><br><span class="line">app.listen(port,ip,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="comment">//app服务器监听端口</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;服务器运行在http://&quot;</span>+ip+<span class="string">&quot;:&quot;</span>+port)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//配置 一级路由规则</span></span><br><span class="line">app.use(<span class="string">&#x27;/&#x27;</span>,IndexRouter)</span><br><span class="line">app.use(<span class="string">&#x27;/a&#x27;</span>,RouterA)</span><br><span class="line"><span class="comment">//404处理</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params">req,res</span>)</span>&#123; <span class="comment">// app添加 get请求根路径的路由</span></span><br><span class="line"><span class="comment">// res.send(&quot;hello world&quot;);// 向前台输出</span></span><br><span class="line"><span class="built_in">console</span>.log(req.url)</span><br><span class="line">res.write(<span class="string">&quot;404&quot;</span>);</span><br><span class="line">res.end()</span><br><span class="line">&#125;</span><br><span class="line">	二．安装依赖 express ,ejs</span><br><span class="line">三．创建views（视图文件），public（静态资源文件）,routes（路由文件）文件夹</span><br><span class="line">四．routes下创建路由文件index.js,a.js</span><br><span class="line"><span class="comment">//加载express模块</span></span><br><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&#x27;express&#x27;</span>);</span><br><span class="line"><span class="comment">//创建router对象</span></span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"><span class="comment">//配置 二级路由</span></span><br><span class="line">router.get(<span class="string">&#x27;/&#x27;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">req, res, next</span>) </span>&#123;</span><br><span class="line">res.render(<span class="string">&#x27;index&#x27;</span>)</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//导出路由模块</span></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure>
+<h2 id="29-ejs文件中如何声明变量a"><a class="markdownIt-Anchor" href="#29-ejs文件中如何声明变量a">#</a> 29、ejs 文件中如何声明变量 a?</h2>
+<pre><code> &lt;%  a=100  %&gt;
+</code></pre>
+<h2 id="30ejs文件中如何使用输入变量a"><a class="markdownIt-Anchor" href="#30ejs文件中如何使用输入变量a">#</a> 30.ejs 文件中如何使用输入变量 a?</h2>
+<pre><code> &lt;%=  a  %&gt;
+</code></pre>
+<h2 id="31ejs文件中如何引用-外部ejs文件比如headejs"><a class="markdownIt-Anchor" href="#31ejs文件中如何引用-外部ejs文件比如headejs">#</a> 31.ejs 文件中如何引用 外部 ejs 文件（比如：./head.ejs）？</h2>
+<pre><code> &lt;%  include ./head.ejs  %&gt;
+</code></pre>
+<h2 id="32如果ejs文件中有数据-listnameappleprice5address烟台name香蕉price8address海南-如何用表格将他们展示出来"><a class="markdownIt-Anchor" href="#32如果ejs文件中有数据-listnameappleprice5address烟台name香蕉price8address海南-如何用表格将他们展示出来">#</a> 32. 如果 ejs 文件中有数据 list=[{name:’apple’,price:5,address:’烟台’}，{name:” 香蕉”,price:8,address:’海南’}，…  ], 如何用表格将他们展示出来？</h2>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">&quot;1&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">th</span>&gt;</span>水果名<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">th</span>&gt;</span>价格<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">th</span>&gt;</span>产地<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">&lt;% for(var a in list)&#123; %&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">&lt;%= list[a].name %&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">&lt;%= list[a].price %&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">&lt;%= list[a].address %&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="33-要点1pathparse-解析地址"><a class="markdownIt-Anchor" href="#33-要点1pathparse-解析地址">#</a> 33、要点：1.path.parse () 解析地址</h2>
+<pre><code>2.path.normalize()格式化路径 注意'..' 和 '.'
+3.path.join() 连接路径
+4.path.resolve()  转换为绝对路径
+</code></pre>
+<h2 id="34_-_dirname表示什么"><a class="markdownIt-Anchor" href="#34_-_dirname表示什么">#</a> 34._ _dirname 表示什么？</h2>
+<pre><code>当前文件所在目录
+</code></pre>
+<h2 id="35_-_filename表示什么"><a class="markdownIt-Anchor" href="#35_-_filename表示什么">#</a> 35._ _filename 表示什么？</h2>
+<pre><code>当前文件路径
+</code></pre>
+<h2 id="36-var-strcwampwwwahtml"><a class="markdownIt-Anchor" href="#36-var-strcwampwwwahtml">#</a> 36.   var str=‘c:\wamp\www\a.html’;</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj=path.parse(str);</span><br><span class="line">请写出obj.base,obj.ext,obj.dir,obj.name的值？</span><br><span class="line">  obj.base==‘a.html’  </span><br><span class="line">   obj.ext==’.html’</span><br><span class="line">   obj.dir==’c:\\wamp\\www\\’</span><br><span class="line">   obj.name==’a’</span><br></pre></td></tr></table></figure>
+<h2 id="37consolelogpathnormalizetesttest1abctab输出结果"><a class="markdownIt-Anchor" href="#37consolelogpathnormalizetesttest1abctab输出结果">#</a> 37.console.log (path.normalize (’/test/test1//abc/tab/…’)); 输出结果？</h2>
+<pre><code>‘/test/test1/abc/’
+
+5.console.log(path.join('/test', 'test1', 'home/api', 'tab', '..'));输出结果？
+‘/test/test1/home/api/’
+</code></pre>
+<h2 id="38-全局安装express-generater-指令是"><a class="markdownIt-Anchor" href="#38-全局安装express-generater-指令是">#</a> 38、全局安装 express-generater 指令是？</h2>
+<pre><code>cnpm install express-generator -g 
+或者
+npm install express-generator -g
+</code></pre>
+<h2 id="39-express创建项目test指令"><a class="markdownIt-Anchor" href="#39-express创建项目test指令">#</a> 39、express 创建项目 test 指令？</h2>
+<pre><code>express -e test
+</code></pre>
+<h2 id="40-express创建的项目中文件夹和文件有哪些各自含义"><a class="markdownIt-Anchor" href="#40-express创建的项目中文件夹和文件有哪些各自含义">#</a> 40. express 创建的项目中文件夹和文件有哪些？各自含义？</h2>
+<pre><code>app.js 是主文件  
+package.json 是配置文件  
+bin启动文件    
+public静态资源文件    
+routes路由    
+views是视图文件   
+node_modules 项目依赖
+</code></pre>
+<h2 id="41-命令行启动mongodb数据库服务器在27017端口上的指令是数据库位置cdatadb"><a class="markdownIt-Anchor" href="#41-命令行启动mongodb数据库服务器在27017端口上的指令是数据库位置cdatadb">#</a> 41、命令行启动 mongodb 数据库服务器在 27017 端口上的指令是（数据库位置 c:/data/db）？</h2>
+<pre><code>  mongod --dbpath c:/data/db --port 27017 
+</code></pre>
+<h2 id="42-命令行连接数据库数据库服务器的指令是本地服务器端口27017"><a class="markdownIt-Anchor" href="#42-命令行连接数据库数据库服务器的指令是本地服务器端口27017">#</a> 42、命令行连接数据库数据库服务器的指令是（本地服务器，端口 27017）？</h2>
+<pre><code>mongo --port 27017 
+</code></pre>
+<h2 id="43-命令行查看数据库的指令"><a class="markdownIt-Anchor" href="#43-命令行查看数据库的指令">#</a> 43 、命令行查看数据库的指令？</h2>
+<pre><code>show dbs
+</code></pre>
+<h2 id="44-命令行查看当前数据库集合的指令"><a class="markdownIt-Anchor" href="#44-命令行查看当前数据库集合的指令">#</a> 44、命令行查看当前数据库集合的指令？</h2>
+<pre><code> show collections
+</code></pre>
+<h2 id="45-命令行向user集合添加文档usertompass123456的指令"><a class="markdownIt-Anchor" href="#45-命令行向user集合添加文档usertompass123456的指令">#</a> 45、命令行向 user 集合添加文档 {user:tom，pass:123456} 的指令？</h2>
+<pre><code>db.user.insert(&#123;user:’tom’,pass:123456&#125;);
+</code></pre>
+<h2 id="46命令行查询user集合中所有文档"><a class="markdownIt-Anchor" href="#46命令行查询user集合中所有文档">#</a> 46. 命令行查询 user 集合中所有文档？</h2>
+<pre><code>  db.user.find()
+</code></pre>
+<h2 id="47-命令行查询user集合中age大于18且小于20的文档"><a class="markdownIt-Anchor" href="#47-命令行查询user集合中age大于18且小于20的文档">#</a> 47、命令行查询 user 集合中 age 大于 18 且小于 20 的文档？</h2>
+<pre><code>db.user.find(&#123;age:&#123;$gt:18,$lt:20&#125;&#125;)
+</code></pre>
+<h2 id="48-命令行更新-user集合中name为李四的文档sex改为女其他字段不变"><a class="markdownIt-Anchor" href="#48-命令行更新-user集合中name为李四的文档sex改为女其他字段不变">#</a> 48、命令行更新 user 集合中 name 为‘李四’的文档，sex 改为女，其他字段不变？</h2>
+<pre><code>db.user.update(&#123;name:’李四’&#125;,&#123;$set:&#123;sex:’女’&#125;&#125;)
+</code></pre>
+<h1 id="49-命令行删除user集合中-age大于20且性别sex不为女的所有文档"><a class="markdownIt-Anchor" href="#49-命令行删除user集合中-age大于20且性别sex不为女的所有文档">#</a> 49、命令行删除 user 集合中 age 大于 20 且性别 sex 不为女的所有文档</h1>
+<pre><code>  db.user.remove(&#123;$and:[&#123;age:&#123;$gt:20&#125;&#125;,&#123;sex:&#123;$ne:’女’&#125;&#125;]&#125;)
+   或
+  db.user.remove(&#123;age:&#123;$gt:20&#125;,sex:&#123;$ne:’女’&#125;&#125;)
+</code></pre>
+<h2 id="50-请简述mongoose是什么及作用"><a class="markdownIt-Anchor" href="#50-请简述mongoose是什么及作用">#</a> 50、请简述 mongoose 是什么及作用？</h2>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Mongoose是封装了MongoDB操作的一个对象模型库</span><br><span class="line">   作用是连接后台服务器与数据库服务器，操作数据库</span><br><span class="line">（增删改查）</span><br></pre></td></tr></table></figure>
+<h2 id="51-安装mongoose指令"><a class="markdownIt-Anchor" href="#51-安装mongoose指令">#</a> 51、安装 mongoose 指令？</h2>
+<p>cnpm install mongoose --save</p>
+<h2 id="52-mongoose连接数据库的代码"><a class="markdownIt-Anchor" href="#52-mongoose连接数据库的代码">#</a> 52、mongoose 连接数据库的代码？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   mongoose.connect(‘mongodb:<span class="comment">//127.0.0.1:27017/dbname’,function(err)&#123;</span></span><br><span class="line">            <span class="function"><span class="title">If</span>(<span class="params">!err</span>)</span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(‘数据库连接成功’)</span><br><span class="line">&#125; </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="53-请简述mongoose中schema-model-entity概念"><a class="markdownIt-Anchor" href="#53-请简述mongoose中schema-model-entity概念">#</a> 53、请简述 mongoose 中 schema、model、entity 概念？</h2>
+<pre><code>	<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Schema ： 一种以文件形式存储的数据库模型骨架，不具备数据库的操作能力</span><br><span class="line"></span><br><span class="line">Model ： 由 Schema 发布生成的集合模型，具有抽象属性和行为的数据库操作能力</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Entity ： 由 Model 创建的实体，他的操作也会影响数据库。</span><br><span class="line"><span class="number">5</span>、创建一个Schema，数据结构为user字符串类型，txt字符串类型，另添加时间戳？</span><br><span class="line"><span class="keyword">var</span> mongoose=<span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> Schema=mongooe.Schema;</span><br><span class="line"><span class="keyword">var</span> myschema=<span class="keyword">new</span> Schema(&#123;<span class="attr">user</span>:<span class="built_in">String</span>,<span class="attr">txt</span>:<span class="built_in">String</span>&#125;,&#123;<span class="attr">timestamps</span>:<span class="literal">true</span>&#125;);</span><br><span class="line"><span class="built_in">module</span>.exports=mySchema;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</code></pre>
+<h2 id="54-创建model模型集合名为usermodel中所用到的schema路径为-schemauserjs"><a class="markdownIt-Anchor" href="#54-创建model模型集合名为usermodel中所用到的schema路径为-schemauserjs">#</a> 54、创建 model 模型，集合名为 User（model 中所用到的 schema 路径为 …/schema/user.js）？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose=<span class="built_in">require</span>(<span class="string">&#x27;mongoose&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> mySchema=<span class="built_in">require</span>(<span class="string">&#x27;../schema/user&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> User=mongoose.model(<span class="string">&#x27;User&#x27;</span>,mySchema);</span><br><span class="line"><span class="built_in">module</span>.exports=User;</span><br></pre></td></tr></table></figure>
+<h2 id="55若通过mongoose创建的集合模型为useruser集合添加一条文档usertomtxthello-world添加成功后重定向路径"><a class="markdownIt-Anchor" href="#55若通过mongoose创建的集合模型为useruser集合添加一条文档usertomtxthello-world添加成功后重定向路径">#</a> 55. 若通过 mongoose 创建的集合模型为 User，User 集合添加一条文档 {user:’tom’,txt:’hello world’}，添加成功后重定向‘/’路径？,</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">User.create(&#123;<span class="attr">user</span>:’tom’,<span class="attr">txt</span>:’hello world’&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">         <span class="function"><span class="title">If</span>(<span class="params">!err</span>)</span>&#123;</span><br><span class="line">            res.redirect(‘/’)</span><br><span class="line">&#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="56-若通过mongoose创建的集合模型为user请使用实体entitysave的方式向user集合中添加一条文档usertomtxthello-world添加成功后重定向路径"><a class="markdownIt-Anchor" href="#56-若通过mongoose创建的集合模型为user请使用实体entitysave的方式向user集合中添加一条文档usertomtxthello-world添加成功后重定向路径">#</a> 56、若通过 mongoose 创建的集合模型为 User，请使用实体（entity.save ()）的方式向 User 集合中添加一条文档 {user:’tom’,txt:’hello world’}，添加成功后重定向‘/’路径？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> entity=<span class="keyword">new</span> User(&#123;<span class="attr">user</span>:’tom’,<span class="attr">txt</span>:’hello world’&#125;);</span><br><span class="line">entity.save(<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">         <span class="function"><span class="title">If</span>(<span class="params">!err</span>)</span>&#123;</span><br><span class="line">            res.redirect(‘/’)</span><br><span class="line">&#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="57-若通过mongoose创建的集合模型为useruser查询所有文档查询成功后渲染index文件resrenderindexlistdata"><a class="markdownIt-Anchor" href="#57-若通过mongoose创建的集合模型为useruser查询所有文档查询成功后渲染index文件resrenderindexlistdata">#</a> 57、若通过 mongoose 创建的集合模型为 User，User 查询所有文档，查询成功后渲染 index 文件，（res.render (‘index’,{list:data}) ）？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">     User.find(&#123;&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;   </span><br><span class="line">          <span class="function"><span class="title">If</span>(<span class="params">!err</span>)</span>&#123;</span><br><span class="line">res.render(‘index’,&#123;<span class="attr">list</span>:data&#125;)</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="58-若通过mongoose创建的集合模型为useruser集合删除_id12345的集合删除成功后重定向路径"><a class="markdownIt-Anchor" href="#58-若通过mongoose创建的集合模型为useruser集合删除_id12345的集合删除成功后重定向路径">#</a> 58、若通过 mongoose 创建的集合模型为 User，User 集合删除 {_id:12345} 的集合，删除成功后重定向‘/’路径？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">	User.remove(&#123;<span class="attr">_id</span>:<span class="number">12345</span>&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">            <span class="function"><span class="title">If</span>(<span class="params">!err</span>)</span>&#123;</span><br><span class="line">          res.redirect(‘/’);</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="59-若通过mongoose创建的集合模型为studentstudent集合删除_id12345的集合删除成功后向前端响应json数据为code1msg删除成功"><a class="markdownIt-Anchor" href="#59-若通过mongoose创建的集合模型为studentstudent集合删除_id12345的集合删除成功后向前端响应json数据为code1msg删除成功">#</a> 59、若通过 mongoose 创建的集合模型为 Student，Student 集合删除 {_id:12345} 的集合，删除成功后向前端响应 json 数据为 {code:1,msg:” 删除成功”}？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Student.remove(&#123;<span class="attr">_id</span>:<span class="number">12345</span>&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">            <span class="function"><span class="title">If</span>(<span class="params">!err</span>)</span>&#123;</span><br><span class="line">res.json(&#123;<span class="attr">code</span>:<span class="number">1</span>,<span class="attr">msg</span>:’删除成功’&#125;)</span><br><span class="line">&#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="60-若通过mongoose创建的集合模型为studentstudent集合修改_id12345的集合把sex修改为女修改成功后向前端响应json数据为code1msg修改成功"><a class="markdownIt-Anchor" href="#60-若通过mongoose创建的集合模型为studentstudent集合修改_id12345的集合把sex修改为女修改成功后向前端响应json数据为code1msg修改成功">#</a> 60、若通过 mongoose 创建的集合模型为 Student，Student 集合修改 {_id:12345} 的集合，把 sex 修改为’女’，修改成功后向前端响应 json 数据为 {code:1,msg:” 修改成功”}？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Student.update(&#123;<span class="attr">_id</span>:<span class="number">12345</span>&#125;,&#123;<span class="attr">$set</span>:&#123;<span class="attr">sex</span>:’女’&#125;&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err,data</span>)</span>&#123;</span><br><span class="line">        <span class="function"><span class="title">If</span>(<span class="params">!err</span>)</span>&#123;</span><br><span class="line">         res.json(&#123;<span class="attr">code</span>:<span class="number">1</span>,<span class="attr">msg</span>:’修改成功’&#125;)_</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="61-node提供的系统模块url用那个方法可以将路径转化为对象方便使用"><a class="markdownIt-Anchor" href="#61-node提供的系统模块url用那个方法可以将路径转化为对象方便使用">#</a> 61、Node 提供的系统模块 url，用那个方法可以将路径转化为对象方便使用？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  url.parse()</span><br><span class="line"><span class="number">1</span>、url模块的使用</span><br><span class="line">   将请求地址解析成对象。</span><br><span class="line"><span class="number">3</span>、请使用http搭建一个最简单的服务器，直接写代码？</span><br><span class="line"> <span class="keyword">var</span> http=<span class="built_in">require</span>(‘http’);</span><br><span class="line"><span class="keyword">var</span> server=http.createServer(<span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</span><br><span class="line">     <span class="comment">//业务逻辑      &#125;)</span></span><br><span class="line">server.listen(<span class="number">3000</span>,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;<span class="keyword">if</span>(!err)&#123;<span class="built_in">console</span>.log(‘服务器运行在<span class="number">3000</span>端口上’)&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="62-nodejs中的全局对象是谁有全局对象window么"><a class="markdownIt-Anchor" href="#62-nodejs中的全局对象是谁有全局对象window么">#</a> 62、nodejs 中的全局对象是谁？有全局对象 window 么？</h2>
+<pre><code>个劳保   global     nodejs中没有window对象
+</code></pre>
+<h2 id="63-如何给input绑定键盘事件"><a class="markdownIt-Anchor" href="#63-如何给input绑定键盘事件">#</a> 63、如何给 input 绑定键盘事件？</h2>
+<p>Input.onkeydow(function(){})</p>
+<h2 id="64-未知宽高垂直水平居中"><a class="markdownIt-Anchor" href="#64-未知宽高垂直水平居中">#</a> 64、未知宽高垂直水平居中？</h2>
+<pre><code> 给父元素设置绝对定位，子元素相对定位，子元素left：50%；top:50%;    margen-left:-本身宽度一半；margen-top:-本身高度一半
+</code></pre>
+<h2 id="65-请简述同步异步的区别"><a class="markdownIt-Anchor" href="#65-请简述同步异步的区别">#</a> 65、请简述同步异步的区别？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">异步：在一件事情没有做完，可以接着做另外一件事  非阻塞</span><br><span class="line">同步：一件事情没有做完，就不可以做下一件事    阻塞。</span><br><span class="line">同步案例：<span class="keyword">for</span>循环语句，alert() 等 </span><br><span class="line"> 异步案例：定时器，ajax异步请求</span><br></pre></td></tr></table></figure>
+<h2 id="66-请简述commonjs规范中模块导入和导出语法"><a class="markdownIt-Anchor" href="#66-请简述commonjs规范中模块导入和导出语法">#</a> 66、请简述 commonjs 规范中模块导入和导出语法？</h2>
+<pre><code>	模块导出： module.exports=&#123;&#125;
+  模块导入:   require(‘路径’)
+</code></pre>
+<h2 id="67-使用模块的好处"><a class="markdownIt-Anchor" href="#67-使用模块的好处">#</a> 67、使用模块的好处？</h2>
+<pre><code>   封装模块，可以提高开发效率，提高代码复用率。
+</code></pre>
+<h2 id="68-如果要全局安装express-generator使用的命令是"><a class="markdownIt-Anchor" href="#68-如果要全局安装express-generator使用的命令是">#</a> 68、如果要全局安装 express-generator 使用的命令是？</h2>
+<pre><code>cnpm  i  express  -generator
+</code></pre>
+<h2 id="69-如何使用express创建一个项目"><a class="markdownIt-Anchor" href="#69-如何使用express创建一个项目">#</a> 69、如何使用 express 创建一个项目？</h2>
+<pre><code>express myname
+</code></pre>
+<h2 id="70-如何启动express项目"><a class="markdownIt-Anchor" href="#70-如何启动express项目">#</a> 70、如何启动 express 项目？</h2>
+<pre><code>npm start
+</code></pre>
+<h2 id="71-为什么npm-start可以启动express项目"><a class="markdownIt-Anchor" href="#71-为什么npm-start可以启动express项目">#</a> 71、为什么 npm start 可以启动 express 项目？</h2>
+<pre><code>在配置文件 package.json里 指定子bin 启动文件 可以启动
+</code></pre>
+<h2 id="72-express项目中public目录的作用是"><a class="markdownIt-Anchor" href="#72-express项目中public目录的作用是">#</a> 72、express 项目中 public 目录的作用是？</h2>
+<pre><code>静态资源文件 html css js img
+</code></pre>
+<h2 id="73-routes目录的作用是"><a class="markdownIt-Anchor" href="#73-routes目录的作用是">#</a> 73、Routes 目录的作用是？</h2>
+<pre><code>路由  包括前后台交互接口
+</code></pre>
+<h2 id="74-views文件夹的作用是"><a class="markdownIt-Anchor" href="#74-views文件夹的作用是">#</a> 74、views 文件夹的作用是？</h2>
+<pre><code>视图文件  前端模板页面
+</code></pre>
+<h2 id="75-appjs文件的作用是"><a class="markdownIt-Anchor" href="#75-appjs文件的作用是">#</a> 75、app.js 文件的作用是？</h2>
+<pre><code>主文件 入口文件
+</code></pre>
+<h2 id="76-bin目录的作用是"><a class="markdownIt-Anchor" href="#76-bin目录的作用是">#</a> 76、bin 目录的作用是？</h2>
+<pre><code>存放启动项目的脚本文件
+</code></pre>
+<h2 id="77express-创建项目-test请写出指令"><a class="markdownIt-Anchor" href="#77express-创建项目-test请写出指令">#</a> 77.express 创建项目 test，请写出指令？</h2>
+<pre><code>Express –e test
+</code></pre>
+<h2 id="78-下载mongoose中间件并写入dependecies请写出指令"><a class="markdownIt-Anchor" href="#78-下载mongoose中间件并写入dependecies请写出指令">#</a> 78、下载 mongoose 中间件并写入 dependecies，请写出指令？</h2>
+<pre><code>Cnpm install mongoose --save
+</code></pre>
+<h2 id="79-mongose连接数据库已知数据库服务器地址为12700127017book写出代码"><a class="markdownIt-Anchor" href="#79-mongose连接数据库已知数据库服务器地址为12700127017book写出代码">#</a> 79、mongose 连接数据库，已知数据库服务器地址为：127.0.0.1:27017/book，写出代码？</h2>
+<pre><code>Mongoose.connect(“mongodb://127.0.0.1:27017/book”,function(err)&#123;
+If(!err)&#123;
+             Console.log(“数据库连接成功”)
+&#125;
+&#125;)
+</code></pre>
+<h2 id="80-写出mongoose中-schema的创建步骤数据结构为-userstringpassstring请写出代码"><a class="markdownIt-Anchor" href="#80-写出mongoose中-schema的创建步骤数据结构为-userstringpassstring请写出代码">#</a> 80、写出 mongoose 中 schema 的创建步骤，数据结构为 {user:String,pass:String}, 请写出代码</h2>
+<pre><code>Var mongoose = require(“mongoose”)；
+Var Schema = mongoose,Schema；
+Var myschema = new Schema(&#123;user:String,pass:String&#125;);
+Module.exports = myschema
+</code></pre>
+<h2 id="81-写出mongoose中model的创建过程"><a class="markdownIt-Anchor" href="#81-写出mongoose中model的创建过程">#</a> 81、写出 mongoose 中 model 的创建过程？</h2>
+<pre><code>Var  mongoose = require(“mongoose”)；
+Var myschema = require(“../schema/user.js”);
+Var User = mongoose.model(“User”，myschema);
+Module.exports = User;
+</code></pre>
+<h2 id="82-user集合插入文档a100bhello写出代码"><a class="markdownIt-Anchor" href="#82-user集合插入文档a100bhello写出代码">#</a> 82、User 集合插入文档 {a:100,b:’hello’}, 写出代码？</h2>
+<pre><code>User.create(&#123;a:100,b:’hello’&#125;)
+</code></pre>
+<h2 id="83-user集合删除name为张三的所有文档写出代码"><a class="markdownIt-Anchor" href="#83-user集合删除name为张三的所有文档写出代码">#</a> 83、User 集合删除 name 为‘张三’的所有文档，写出代码？</h2>
+<pre><code>User.remove(&#123;name:“张三”&#125;)
+</code></pre>
+<h2 id="84-user集合中把name张三的那个文档中age改为20写出代码"><a class="markdownIt-Anchor" href="#84-user集合中把name张三的那个文档中age改为20写出代码">#</a> 84、User 集合中，把 {name:’张三’} 的那个文档中 age 改为 20，写出代码？</h2>
+<pre><code>User.updateOne(&#123;name: “张三”&#125;，&#123;$set:&#123;age:20&#125;&#125;)
+</code></pre>
+<h2 id="85-user集合中查找所有年龄大于20的文档写出代码"><a class="markdownIt-Anchor" href="#85-user集合中查找所有年龄大于20的文档写出代码">#</a> 85、User 集合中，查找所有年龄大于 20 的文档，写出代码？</h2>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">User.find(&#123;<span class="attr">age</span>:&#123;<span class="attr">$gt</span>:<span class="number">20</span>&#125;&#125;)</span><br><span class="line"><span class="number">10</span>、User集合中，查找所有sex为’女’的文档，写出代码？</span><br><span class="line">User.find(&#123;<span class="attr">sex</span>:“女”&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">LocalStorage和sessionStorage是HTML5新增加的web机制 </span><br><span class="line"><span class="number">1.</span> Localstorage生命周期长必须手动才能清除</span><br><span class="line"><span class="number">2.</span>Sessionstorage的生命周期是从页面开启到页面关闭</span><br><span class="line"><span class="number">3.</span>内存方面：Localstorge和Sessionstorge是5M  cookie是5K</span><br><span class="line"><span class="number">4.</span>cookie的使用会占用过多的带</span><br><span class="line"><span class="number">5.</span> Session存储的位置 不在客户端而是服务器端</span><br><span class="line"><span class="number">6.</span> Session比cookie更安全隐秘</span><br></pre></td></tr></table></figure>
+<p>Web 服务器可以用来解析我们的 http 请求 给我们做出相对应的响应与反馈</p>
+
+      <div class="tags">
+          <a href="/tags/ES6-node/" rel="tag"><i class="ic i-tag"></i> ES6,node</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2021-01-04 21:02:35" itemprop="dateModified" datetime="2021-01-04T21:02:35+08:00">2021-01-04</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="高祥 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="高祥 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="高祥 贝宝">
+        <p>贝宝</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>高祥君 <i class="ic i-at"><em>@</em></i>主人
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2017/10/09/node%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/" title="node常见面试题库">http://example.com/2017/10/09/node常见面试题库/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2017/10/09/%E9%9D%A2%E8%AF%95%E9%AB%98%E5%87%A0%E7%8E%87%E8%80%83%E7%9A%84%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxxcb6rj20zk0m8b29.jpg" title="面试高几率考的题">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 总结</span>
+  <h3>面试高几率考的题</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2017/10/09/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeubcbajj20zk0m8h1h.jpg" title="移动端面试题">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 总结</span>
+  <h3>移动端面试题</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F%E4%B8%ADnode%E7%89%88%E6%9C%AC%E5%8F%B7%E7%9A%84%E6%8C%87%E4%BB%A4%E6%98%AF"><span class="toc-number">1.</span> <span class="toc-text"> 1、检测系统中 node 版本号的指令是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A6%82%E4%BD%95%E9%80%80%E5%87%BAnode%E6%89%A7%E8%A1%8C%E7%8E%AF%E5%A2%83repl%E7%8E%AF%E5%A2%83"><span class="toc-number">2.</span> <span class="toc-text"> 2、如何退出 node 执行环境（REPL 环境）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-node%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%86%99%E5%87%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text"> 3、node 如何创建服务器，写出代码？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-httpcreateserverfunctionreqres-%E8%8E%B7%E5%8F%96%E8%AF%B7%E6%B1%82-%E5%9C%A8%E5%A6%82%E4%B8%8A%E5%87%BD%E6%95%B0%E4%B8%AD%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80"><span class="toc-number">4.</span> <span class="toc-text"> 4、http.createServer (function (req,res){   &#x2F;&#x2F;  获取请求          }) 在如上函数中如何获取前端请求地址？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-reqres%E5%88%86%E5%88%AB%E4%BB%A3%E8%A1%A8%E4%BB%80%E4%B9%88"><span class="toc-number">5.</span> <span class="toc-text"> 5、req,res 分别代表什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E5%A6%82%E4%BD%95%E5%90%91%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%B5%8F%E8%A7%88%E5%99%A8%E5%93%8D%E5%BA%94hello-world"><span class="toc-number">6.</span> <span class="toc-text"> 6. 如何向客户端浏览器响应‘hello world’？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AF%B7%E6%B1%82-faviconico%E8%A1%A8%E7%A4%BA%E4%BB%80%E4%B9%88%E5%A6%82%E4%BD%95%E5%81%9A%E5%87%BA%E5%93%8D%E5%BA%94"><span class="toc-number">7.</span> <span class="toc-text"> 7. 浏览器请求 ‘&#x2F;favicon.ico’表示什么？如何做出响应？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%A6%82%E4%BD%95%E5%8A%A0%E8%BD%BDfs%E6%A8%A1%E5%9D%97"><span class="toc-number">8.</span> <span class="toc-text"> 8、如何加载 fs 模块？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-fs%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E5%BC%82%E6%AD%A5%E8%AF%BB%E5%8F%96%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E4%B8%BAfilejson"><span class="toc-number">9.</span> <span class="toc-text"> 9、fs 模块如何异步读取一个文件 (文件路径为：’.&#x2F;file.json’)？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-fs%E5%A6%82%E4%BD%95%E5%90%8C%E6%AD%A5%E8%AF%BB%E5%8F%96%E6%96%87%E4%BB%B6%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84%E4%B8%BAfilejson"><span class="toc-number">10.</span> <span class="toc-text"> 10、fs 如何同步读取文件（文件的路径为：‘.&#x2F;file.json’）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5%E7%9A%84%E5%8C%BA%E5%88%AB%E5%90%84%E4%B8%BE%E4%B8%80%E4%B8%AAjs%E4%B8%AD%E5%90%8C%E6%AD%A5%E5%92%8C%E5%BC%82%E6%AD%A5%E7%9A%84%E6%A1%88%E4%BE%8B"><span class="toc-number">11.</span> <span class="toc-text"> 11、同步和异步的区别？各举一个 Js 中同步和异步的案例？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-fs%E5%A6%82%E4%BD%95%E5%BC%82%E6%AD%A5%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E5%86%85%E5%AE%B9%E4%B8%BAabc%E5%86%99%E5%85%A5%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E4%B8%BAfiletxt"><span class="toc-number">12.</span> <span class="toc-text"> 12、fs 如何异步写入文件，写入内容为‘abc’, 写入文件路径为’.&#x2F;file.txt’？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-%E5%86%99%E5%87%BA%E6%B3%A8%E5%86%8C%E7%9A%84form%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E5%9C%B0%E5%9D%80%E4%B8%BAapilogin%E6%8F%90%E4%BA%A4%E6%96%B9%E5%BC%8F%E4%B8%BAget%E7%94%A8%E6%88%B7%E5%90%8D%E5%AD%97%E6%AE%B5%E4%B8%BAuser%E5%AF%86%E7%A0%81%E5%AD%97%E6%AE%B5%E4%B8%BApass"><span class="toc-number">13.</span> <span class="toc-text"> 13、写出注册的 form 表单，提交地址为’&#x2F;api&#x2F;login’, 提交方式为’get’, 用户名字段为 user, 密码字段为 pass？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-querystring%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%A7%A3%E6%9E%90%E5%A6%82%E4%B8%8B%E5%AD%97%E7%AC%A6%E4%B8%B2usertompass123456"><span class="toc-number">14.</span> <span class="toc-text"> 14、querystring 模块如何解析如下字符串，（‘user&#x3D;tom&amp;pass&#x3D;123456’）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-url%E6%A8%A1%E5%9D%97%E5%A6%82%E4%BD%95%E8%A7%A3%E6%9E%90%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80requrl-%E5%BE%97%E5%88%B0%E5%A6%82%E4%B8%8B%E5%8F%82%E6%95%B0pathanemqueryuserxxxpassxxxx"><span class="toc-number">15.</span> <span class="toc-text"> 15、url 模块如何解析请求地址 req.url, 得到如下参数 {pathanem:’&#x2F;’,query:{user:xxx,pass:xxxx}} ？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-node%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82%E5%92%8C%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81"><span class="toc-number">16.</span> <span class="toc-text"> 16、node 服务器如何设置跨域请求和中文乱码？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-npm%E6%98%AF%E4%BB%80%E4%B9%88"><span class="toc-number">17.</span> <span class="toc-text"> 17、npm 是什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-npm%E5%A6%82%E4%BD%95%E4%B8%8B%E8%BD%BD-jquery"><span class="toc-number">18.</span> <span class="toc-text"> 18、npm 如何下载 jquery？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-npm%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD%E7%9A%84%E5%8C%85%E6%94%BE%E5%9C%A8%E5%93%AA%E4%B8%AA%E6%96%87%E4%BB%B6%E5%A4%B9%E9%87%8C"><span class="toc-number">19.</span> <span class="toc-text"> 19、npm 工具下载的包放在哪个文件夹里？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-npm%E5%A6%82%E4%BD%95%E5%88%9B%E5%BB%BApackagejson"><span class="toc-number">20.</span> <span class="toc-text"> 20、npm 如何创建 package.json？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-cnpm-%E5%92%8Cnpm%E7%9A%84%E5%8C%BA%E5%88%AB%E6%88%91%E4%BB%AC%E4%B8%8B%E8%BD%BD%E6%8F%92%E4%BB%B6%E4%B8%80%E8%88%AC%E7%94%A8%E5%93%AA%E4%B8%AA"><span class="toc-number">21.</span> <span class="toc-text"> 21、cnpm 和 npm 的区别？我们下载插件一般用哪个？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-commonjs%E8%A7%84%E8%8C%83%E5%A6%82%E4%BD%95%E5%AF%BC%E5%87%BA%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97"><span class="toc-number">22.</span> <span class="toc-text"> 22 、commonjs 规范，如何导出一个模块？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-commonjs%E8%A7%84%E8%8C%83%E5%A6%82%E4%BD%95%E5%AF%BC%E5%85%A5%E4%B8%80%E4%B8%AA%E6%A8%A1%E5%9D%97"><span class="toc-number">23.</span> <span class="toc-text"> 23、commonjs 规范，如何导入一个模块？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-%E8%87%AA%E5%B7%B1%E4%BB%BF%E5%86%99url%E6%A8%A1%E5%9D%97%E8%83%BD%E6%8A%8Aapiusertompass12345%E8%A7%A3%E6%9E%90%E6%88%90%E5%AF%B9%E8%B1%A1pathnameapiqueryusertompass12345%E9%81%B5%E5%BE%AAcommenjs%E8%A7%84%E8%8C%83"><span class="toc-number">24.</span> <span class="toc-text"> 24、自己仿写 url 模块（能把’&#x2F;api?user&#x3D;tom&amp;pass&#x3D;12345’解析成对象 {pathname:’&#x2F;api’,query:{user:’tom’,pass:12345}}），遵循 commenjs 规范？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-npm%E5%8C%85%E7%9A%84%E5%8F%91%E5%B8%83%E6%B5%81%E7%A8%8B"><span class="toc-number">25.</span> <span class="toc-text"> 25、npm 包的发布流程？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-node%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%A6%82%E4%BD%95%E6%8E%A5%E5%8F%97post%E8%AF%B7%E6%B1%82"><span class="toc-number">26.</span> <span class="toc-text"> 26、node 服务器如何接受 post 请求？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27get%E4%B8%8Epost%E5%8C%BA%E5%88%AB"><span class="toc-number">27.</span> <span class="toc-text"> 27.get 与 post 区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-express%E6%90%AD%E5%BB%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%8C%E6%88%90%E6%A1%88%E4%BE%8B%E6%B3%A8%E6%84%8F%E8%A7%86%E5%9B%BE%E6%96%87%E4%BB%B6%E7%9A%84%E9%85%8D%E7%BD%AE%E8%A7%86%E5%9B%BE%E6%96%87%E4%BB%B6%E5%BC%95%E6%93%8E%E7%9A%84%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E7%9A%84%E9%85%8D%E7%BD%AE%E5%BD%95%E5%B1%8F"><span class="toc-number">28.</span> <span class="toc-text"> 28、express 搭建服务器完成案例（注意：视图文件的配置，视图文件引擎的配置，静态资源文件的配置）（录屏）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29-ejs%E6%96%87%E4%BB%B6%E4%B8%AD%E5%A6%82%E4%BD%95%E5%A3%B0%E6%98%8E%E5%8F%98%E9%87%8Fa"><span class="toc-number">29.</span> <span class="toc-text"> 29、ejs 文件中如何声明变量 a?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30ejs%E6%96%87%E4%BB%B6%E4%B8%AD%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BE%93%E5%85%A5%E5%8F%98%E9%87%8Fa"><span class="toc-number">30.</span> <span class="toc-text"> 30.ejs 文件中如何使用输入变量 a?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#31ejs%E6%96%87%E4%BB%B6%E4%B8%AD%E5%A6%82%E4%BD%95%E5%BC%95%E7%94%A8-%E5%A4%96%E9%83%A8ejs%E6%96%87%E4%BB%B6%E6%AF%94%E5%A6%82headejs"><span class="toc-number">31.</span> <span class="toc-text"> 31.ejs 文件中如何引用 外部 ejs 文件（比如：.&#x2F;head.ejs）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32%E5%A6%82%E6%9E%9Cejs%E6%96%87%E4%BB%B6%E4%B8%AD%E6%9C%89%E6%95%B0%E6%8D%AE-listnameappleprice5address%E7%83%9F%E5%8F%B0name%E9%A6%99%E8%95%89price8address%E6%B5%B7%E5%8D%97-%E5%A6%82%E4%BD%95%E7%94%A8%E8%A1%A8%E6%A0%BC%E5%B0%86%E4%BB%96%E4%BB%AC%E5%B1%95%E7%A4%BA%E5%87%BA%E6%9D%A5"><span class="toc-number">32.</span> <span class="toc-text"> 32. 如果 ejs 文件中有数据 list&#x3D;[{name:’apple’,price:5,address:’烟台’}，{name:” 香蕉”,price:8,address:’海南’}，…  ], 如何用表格将他们展示出来？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33-%E8%A6%81%E7%82%B91pathparse-%E8%A7%A3%E6%9E%90%E5%9C%B0%E5%9D%80"><span class="toc-number">33.</span> <span class="toc-text"> 33、要点：1.path.parse () 解析地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34_-_dirname%E8%A1%A8%E7%A4%BA%E4%BB%80%E4%B9%88"><span class="toc-number">34.</span> <span class="toc-text"> 34._ _dirname 表示什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#35_-_filename%E8%A1%A8%E7%A4%BA%E4%BB%80%E4%B9%88"><span class="toc-number">35.</span> <span class="toc-text"> 35._ _filename 表示什么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#36-var-strcwampwwwahtml"><span class="toc-number">36.</span> <span class="toc-text"> 36.   var str&#x3D;‘c:\wamp\www\a.html’;</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#37consolelogpathnormalizetesttest1abctab%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C"><span class="toc-number">37.</span> <span class="toc-text"> 37.console.log (path.normalize (’&#x2F;test&#x2F;test1&#x2F;&#x2F;abc&#x2F;tab&#x2F;…’)); 输出结果？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#38-%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85express-generater-%E6%8C%87%E4%BB%A4%E6%98%AF"><span class="toc-number">38.</span> <span class="toc-text"> 38、全局安装 express-generater 指令是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#39-express%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AEtest%E6%8C%87%E4%BB%A4"><span class="toc-number">39.</span> <span class="toc-text"> 39、express 创建项目 test 指令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#40-express%E5%88%9B%E5%BB%BA%E7%9A%84%E9%A1%B9%E7%9B%AE%E4%B8%AD%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C%E6%96%87%E4%BB%B6%E6%9C%89%E5%93%AA%E4%BA%9B%E5%90%84%E8%87%AA%E5%90%AB%E4%B9%89"><span class="toc-number">40.</span> <span class="toc-text"> 40. express 创建的项目中文件夹和文件有哪些？各自含义？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#41-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%AF%E5%8A%A8mongodb%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%A827017%E7%AB%AF%E5%8F%A3%E4%B8%8A%E7%9A%84%E6%8C%87%E4%BB%A4%E6%98%AF%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%8D%E7%BD%AEcdatadb"><span class="toc-number">41.</span> <span class="toc-text"> 41、命令行启动 mongodb 数据库服务器在 27017 端口上的指令是（数据库位置 c:&#x2F;data&#x2F;db）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#42-%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E6%8C%87%E4%BB%A4%E6%98%AF%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E5%8F%A327017"><span class="toc-number">42.</span> <span class="toc-text"> 42、命令行连接数据库数据库服务器的指令是（本地服务器，端口 27017）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#43-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="toc-number">43.</span> <span class="toc-text"> 43 、命令行查看数据库的指令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#44-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8B%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E9%9B%86%E5%90%88%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="toc-number">44.</span> <span class="toc-text"> 44、命令行查看当前数据库集合的指令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#45-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%90%91user%E9%9B%86%E5%90%88%E6%B7%BB%E5%8A%A0%E6%96%87%E6%A1%A3usertompass123456%E7%9A%84%E6%8C%87%E4%BB%A4"><span class="toc-number">45.</span> <span class="toc-text"> 45、命令行向 user 集合添加文档 {user:tom，pass:123456} 的指令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#46%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E8%AF%A2user%E9%9B%86%E5%90%88%E4%B8%AD%E6%89%80%E6%9C%89%E6%96%87%E6%A1%A3"><span class="toc-number">46.</span> <span class="toc-text"> 46. 命令行查询 user 集合中所有文档？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#47-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E8%AF%A2user%E9%9B%86%E5%90%88%E4%B8%ADage%E5%A4%A7%E4%BA%8E18%E4%B8%94%E5%B0%8F%E4%BA%8E20%E7%9A%84%E6%96%87%E6%A1%A3"><span class="toc-number">47.</span> <span class="toc-text"> 47、命令行查询 user 集合中 age 大于 18 且小于 20 的文档？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#48-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9B%B4%E6%96%B0-user%E9%9B%86%E5%90%88%E4%B8%ADname%E4%B8%BA%E6%9D%8E%E5%9B%9B%E7%9A%84%E6%96%87%E6%A1%A3sex%E6%94%B9%E4%B8%BA%E5%A5%B3%E5%85%B6%E4%BB%96%E5%AD%97%E6%AE%B5%E4%B8%8D%E5%8F%98"><span class="toc-number">48.</span> <span class="toc-text"> 48、命令行更新 user 集合中 name 为‘李四’的文档，sex 改为女，其他字段不变？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#49-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%88%A0%E9%99%A4user%E9%9B%86%E5%90%88%E4%B8%AD-age%E5%A4%A7%E4%BA%8E20%E4%B8%94%E6%80%A7%E5%88%ABsex%E4%B8%8D%E4%B8%BA%E5%A5%B3%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E6%A1%A3"><span class="toc-number"></span> <span class="toc-text"> 49、命令行删除 user 集合中 age 大于 20 且性别 sex 不为女的所有文档</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#50-%E8%AF%B7%E7%AE%80%E8%BF%B0mongoose%E6%98%AF%E4%BB%80%E4%B9%88%E5%8F%8A%E4%BD%9C%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text"> 50、请简述 mongoose 是什么及作用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#51-%E5%AE%89%E8%A3%85mongoose%E6%8C%87%E4%BB%A4"><span class="toc-number">2.</span> <span class="toc-text"> 51、安装 mongoose 指令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#52-mongoose%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E4%BB%A3%E7%A0%81"><span class="toc-number">3.</span> <span class="toc-text"> 52、mongoose 连接数据库的代码？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#53-%E8%AF%B7%E7%AE%80%E8%BF%B0mongoose%E4%B8%ADschema-model-entity%E6%A6%82%E5%BF%B5"><span class="toc-number">4.</span> <span class="toc-text"> 53、请简述 mongoose 中 schema、model、entity 概念？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#54-%E5%88%9B%E5%BB%BAmodel%E6%A8%A1%E5%9E%8B%E9%9B%86%E5%90%88%E5%90%8D%E4%B8%BAusermodel%E4%B8%AD%E6%89%80%E7%94%A8%E5%88%B0%E7%9A%84schema%E8%B7%AF%E5%BE%84%E4%B8%BA-schemauserjs"><span class="toc-number">5.</span> <span class="toc-text"> 54、创建 model 模型，集合名为 User（model 中所用到的 schema 路径为 …&#x2F;schema&#x2F;user.js）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#55%E8%8B%A5%E9%80%9A%E8%BF%87mongoose%E5%88%9B%E5%BB%BA%E7%9A%84%E9%9B%86%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%BAuseruser%E9%9B%86%E5%90%88%E6%B7%BB%E5%8A%A0%E4%B8%80%E6%9D%A1%E6%96%87%E6%A1%A3usertomtxthello-world%E6%B7%BB%E5%8A%A0%E6%88%90%E5%8A%9F%E5%90%8E%E9%87%8D%E5%AE%9A%E5%90%91%E8%B7%AF%E5%BE%84"><span class="toc-number">6.</span> <span class="toc-text"> 55. 若通过 mongoose 创建的集合模型为 User，User 集合添加一条文档 {user:’tom’,txt:’hello world’}，添加成功后重定向‘&#x2F;’路径？,</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#56-%E8%8B%A5%E9%80%9A%E8%BF%87mongoose%E5%88%9B%E5%BB%BA%E7%9A%84%E9%9B%86%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%BAuser%E8%AF%B7%E4%BD%BF%E7%94%A8%E5%AE%9E%E4%BD%93entitysave%E7%9A%84%E6%96%B9%E5%BC%8F%E5%90%91user%E9%9B%86%E5%90%88%E4%B8%AD%E6%B7%BB%E5%8A%A0%E4%B8%80%E6%9D%A1%E6%96%87%E6%A1%A3usertomtxthello-world%E6%B7%BB%E5%8A%A0%E6%88%90%E5%8A%9F%E5%90%8E%E9%87%8D%E5%AE%9A%E5%90%91%E8%B7%AF%E5%BE%84"><span class="toc-number">7.</span> <span class="toc-text"> 56、若通过 mongoose 创建的集合模型为 User，请使用实体（entity.save ()）的方式向 User 集合中添加一条文档 {user:’tom’,txt:’hello world’}，添加成功后重定向‘&#x2F;’路径？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#57-%E8%8B%A5%E9%80%9A%E8%BF%87mongoose%E5%88%9B%E5%BB%BA%E7%9A%84%E9%9B%86%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%BAuseruser%E6%9F%A5%E8%AF%A2%E6%89%80%E6%9C%89%E6%96%87%E6%A1%A3%E6%9F%A5%E8%AF%A2%E6%88%90%E5%8A%9F%E5%90%8E%E6%B8%B2%E6%9F%93index%E6%96%87%E4%BB%B6resrenderindexlistdata"><span class="toc-number">8.</span> <span class="toc-text"> 57、若通过 mongoose 创建的集合模型为 User，User 查询所有文档，查询成功后渲染 index 文件，（res.render (‘index’,{list:data}) ）？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#58-%E8%8B%A5%E9%80%9A%E8%BF%87mongoose%E5%88%9B%E5%BB%BA%E7%9A%84%E9%9B%86%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%BAuseruser%E9%9B%86%E5%90%88%E5%88%A0%E9%99%A4_id12345%E7%9A%84%E9%9B%86%E5%90%88%E5%88%A0%E9%99%A4%E6%88%90%E5%8A%9F%E5%90%8E%E9%87%8D%E5%AE%9A%E5%90%91%E8%B7%AF%E5%BE%84"><span class="toc-number">9.</span> <span class="toc-text"> 58、若通过 mongoose 创建的集合模型为 User，User 集合删除 {_id:12345} 的集合，删除成功后重定向‘&#x2F;’路径？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#59-%E8%8B%A5%E9%80%9A%E8%BF%87mongoose%E5%88%9B%E5%BB%BA%E7%9A%84%E9%9B%86%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%BAstudentstudent%E9%9B%86%E5%90%88%E5%88%A0%E9%99%A4_id12345%E7%9A%84%E9%9B%86%E5%90%88%E5%88%A0%E9%99%A4%E6%88%90%E5%8A%9F%E5%90%8E%E5%90%91%E5%89%8D%E7%AB%AF%E5%93%8D%E5%BA%94json%E6%95%B0%E6%8D%AE%E4%B8%BAcode1msg%E5%88%A0%E9%99%A4%E6%88%90%E5%8A%9F"><span class="toc-number">10.</span> <span class="toc-text"> 59、若通过 mongoose 创建的集合模型为 Student，Student 集合删除 {_id:12345} 的集合，删除成功后向前端响应 json 数据为 {code:1,msg:” 删除成功”}？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#60-%E8%8B%A5%E9%80%9A%E8%BF%87mongoose%E5%88%9B%E5%BB%BA%E7%9A%84%E9%9B%86%E5%90%88%E6%A8%A1%E5%9E%8B%E4%B8%BAstudentstudent%E9%9B%86%E5%90%88%E4%BF%AE%E6%94%B9_id12345%E7%9A%84%E9%9B%86%E5%90%88%E6%8A%8Asex%E4%BF%AE%E6%94%B9%E4%B8%BA%E5%A5%B3%E4%BF%AE%E6%94%B9%E6%88%90%E5%8A%9F%E5%90%8E%E5%90%91%E5%89%8D%E7%AB%AF%E5%93%8D%E5%BA%94json%E6%95%B0%E6%8D%AE%E4%B8%BAcode1msg%E4%BF%AE%E6%94%B9%E6%88%90%E5%8A%9F"><span class="toc-number">11.</span> <span class="toc-text"> 60、若通过 mongoose 创建的集合模型为 Student，Student 集合修改 {_id:12345} 的集合，把 sex 修改为’女’，修改成功后向前端响应 json 数据为 {code:1,msg:” 修改成功”}？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#61-node%E6%8F%90%E4%BE%9B%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%A8%A1%E5%9D%97url%E7%94%A8%E9%82%A3%E4%B8%AA%E6%96%B9%E6%B3%95%E5%8F%AF%E4%BB%A5%E5%B0%86%E8%B7%AF%E5%BE%84%E8%BD%AC%E5%8C%96%E4%B8%BA%E5%AF%B9%E8%B1%A1%E6%96%B9%E4%BE%BF%E4%BD%BF%E7%94%A8"><span class="toc-number">12.</span> <span class="toc-text"> 61、Node 提供的系统模块 url，用那个方法可以将路径转化为对象方便使用？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#62-nodejs%E4%B8%AD%E7%9A%84%E5%85%A8%E5%B1%80%E5%AF%B9%E8%B1%A1%E6%98%AF%E8%B0%81%E6%9C%89%E5%85%A8%E5%B1%80%E5%AF%B9%E8%B1%A1window%E4%B9%88"><span class="toc-number">13.</span> <span class="toc-text"> 62、nodejs 中的全局对象是谁？有全局对象 window 么？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#63-%E5%A6%82%E4%BD%95%E7%BB%99input%E7%BB%91%E5%AE%9A%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6"><span class="toc-number">14.</span> <span class="toc-text"> 63、如何给 input 绑定键盘事件？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#64-%E6%9C%AA%E7%9F%A5%E5%AE%BD%E9%AB%98%E5%9E%82%E7%9B%B4%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD"><span class="toc-number">15.</span> <span class="toc-text"> 64、未知宽高垂直水平居中？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#65-%E8%AF%B7%E7%AE%80%E8%BF%B0%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">16.</span> <span class="toc-text"> 65、请简述同步异步的区别？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#66-%E8%AF%B7%E7%AE%80%E8%BF%B0commonjs%E8%A7%84%E8%8C%83%E4%B8%AD%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%85%A5%E5%92%8C%E5%AF%BC%E5%87%BA%E8%AF%AD%E6%B3%95"><span class="toc-number">17.</span> <span class="toc-text"> 66、请简述 commonjs 规范中模块导入和导出语法？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#67-%E4%BD%BF%E7%94%A8%E6%A8%A1%E5%9D%97%E7%9A%84%E5%A5%BD%E5%A4%84"><span class="toc-number">18.</span> <span class="toc-text"> 67、使用模块的好处？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#68-%E5%A6%82%E6%9E%9C%E8%A6%81%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85express-generator%E4%BD%BF%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4%E6%98%AF"><span class="toc-number">19.</span> <span class="toc-text"> 68、如果要全局安装 express-generator 使用的命令是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#69-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8express%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE"><span class="toc-number">20.</span> <span class="toc-text"> 69、如何使用 express 创建一个项目？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#70-%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8express%E9%A1%B9%E7%9B%AE"><span class="toc-number">21.</span> <span class="toc-text"> 70、如何启动 express 项目？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#71-%E4%B8%BA%E4%BB%80%E4%B9%88npm-start%E5%8F%AF%E4%BB%A5%E5%90%AF%E5%8A%A8express%E9%A1%B9%E7%9B%AE"><span class="toc-number">22.</span> <span class="toc-text"> 71、为什么 npm start 可以启动 express 项目？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#72-express%E9%A1%B9%E7%9B%AE%E4%B8%ADpublic%E7%9B%AE%E5%BD%95%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF"><span class="toc-number">23.</span> <span class="toc-text"> 72、express 项目中 public 目录的作用是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#73-routes%E7%9B%AE%E5%BD%95%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF"><span class="toc-number">24.</span> <span class="toc-text"> 73、Routes 目录的作用是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#74-views%E6%96%87%E4%BB%B6%E5%A4%B9%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF"><span class="toc-number">25.</span> <span class="toc-text"> 74、views 文件夹的作用是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#75-appjs%E6%96%87%E4%BB%B6%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF"><span class="toc-number">26.</span> <span class="toc-text"> 75、app.js 文件的作用是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#76-bin%E7%9B%AE%E5%BD%95%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF"><span class="toc-number">27.</span> <span class="toc-text"> 76、bin 目录的作用是？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#77express-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE-test%E8%AF%B7%E5%86%99%E5%87%BA%E6%8C%87%E4%BB%A4"><span class="toc-number">28.</span> <span class="toc-text"> 77.express 创建项目 test，请写出指令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#78-%E4%B8%8B%E8%BD%BDmongoose%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%B9%B6%E5%86%99%E5%85%A5dependecies%E8%AF%B7%E5%86%99%E5%87%BA%E6%8C%87%E4%BB%A4"><span class="toc-number">29.</span> <span class="toc-text"> 78、下载 mongoose 中间件并写入 dependecies，请写出指令？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#79-mongose%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%B2%E7%9F%A5%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9C%B0%E5%9D%80%E4%B8%BA12700127017book%E5%86%99%E5%87%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">30.</span> <span class="toc-text"> 79、mongose 连接数据库，已知数据库服务器地址为：127.0.0.1:27017&#x2F;book，写出代码？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#80-%E5%86%99%E5%87%BAmongoose%E4%B8%AD-schema%E7%9A%84%E5%88%9B%E5%BB%BA%E6%AD%A5%E9%AA%A4%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%BA-userstringpassstring%E8%AF%B7%E5%86%99%E5%87%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">31.</span> <span class="toc-text"> 80、写出 mongoose 中 schema 的创建步骤，数据结构为 {user:String,pass:String}, 请写出代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#81-%E5%86%99%E5%87%BAmongoose%E4%B8%ADmodel%E7%9A%84%E5%88%9B%E5%BB%BA%E8%BF%87%E7%A8%8B"><span class="toc-number">32.</span> <span class="toc-text"> 81、写出 mongoose 中 model 的创建过程？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#82-user%E9%9B%86%E5%90%88%E6%8F%92%E5%85%A5%E6%96%87%E6%A1%A3a100bhello%E5%86%99%E5%87%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">33.</span> <span class="toc-text"> 82、User 集合插入文档 {a:100,b:’hello’}, 写出代码？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#83-user%E9%9B%86%E5%90%88%E5%88%A0%E9%99%A4name%E4%B8%BA%E5%BC%A0%E4%B8%89%E7%9A%84%E6%89%80%E6%9C%89%E6%96%87%E6%A1%A3%E5%86%99%E5%87%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">34.</span> <span class="toc-text"> 83、User 集合删除 name 为‘张三’的所有文档，写出代码？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#84-user%E9%9B%86%E5%90%88%E4%B8%AD%E6%8A%8Aname%E5%BC%A0%E4%B8%89%E7%9A%84%E9%82%A3%E4%B8%AA%E6%96%87%E6%A1%A3%E4%B8%ADage%E6%94%B9%E4%B8%BA20%E5%86%99%E5%87%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">35.</span> <span class="toc-text"> 84、User 集合中，把 {name:’张三’} 的那个文档中 age 改为 20，写出代码？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#85-user%E9%9B%86%E5%90%88%E4%B8%AD%E6%9F%A5%E6%89%BE%E6%89%80%E6%9C%89%E5%B9%B4%E9%BE%84%E5%A4%A7%E4%BA%8E20%E7%9A%84%E6%96%87%E6%A1%A3%E5%86%99%E5%87%BA%E4%BB%A3%E7%A0%81"><span class="toc-number">36.</span> <span class="toc-text"> 85、User 集合中，查找所有年龄大于 20 的文档，写出代码？</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/2017/10/09/node%E5%B8%B8%E8%A7%81%E9%9D%A2%E8%AF%95%E9%A2%98%E5%BA%93/" rel="bookmark" title="node常见面试题库">node常见面试题库</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="高祥"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">高祥</p>
+  <div class="description" itemprop="description">前端高级工程师欢迎你</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">30</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">6</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">12</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tLzIzMjE4NzM3NjI=" title="https:&#x2F;&#x2F;github.com&#x2F;2321873762"><i class="ic i-github"></i></span>
+      <span class="exturl item twitter" data-url="aHR0cHM6Ly90d2l0dGVyLmNvbS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;twitter.com&#x2F;yourname"><i class="ic i-twitter"></i></span>
+      <span class="exturl item zhihu" data-url="aHR0cHM6Ly93d3cuemhpaHUuY29tL3Blb3BsZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;yourname"><i class="ic i-zhihu"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPXlvdXJpZA==" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;yourid"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20veW91cm5hbWU=" title="https:&#x2F;&#x2F;weibo.com&#x2F;yourname"><i class="ic i-weibo"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9hYm91dC5tZS95b3VybmFtZQ==" title="https:&#x2F;&#x2F;about.me&#x2F;yourname"><i class="ic i-address-card"></i></span>
+      <span class="exturl item email" data-url="bWFpbHRvOnlvdXJuYW1lQG1haWwuY29t" title="mailto:yourname@mail.com"><i class="ic i-envelope"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2017/10/09/%E9%9D%A2%E8%AF%95%E9%AB%98%E5%87%A0%E7%8E%87%E8%80%83%E7%9A%84%E9%A2%98/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2017/10/09/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Vue/" title="分类于 Vue">Vue</a>
+</div>
+
+    <span><a href="/2017/10/09/element-ui%E5%AE%9E%E7%8E%B0%E5%88%86%E9%A1%B5%E6%95%88%E6%9E%9C/" title="element-ui实现分页效果">element-ui实现分页效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" title="分类于 小程序">小程序</a>
+</div>
+
+    <span><a href="/2017/10/09/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%9B%9E%E5%88%B0%E9%A1%B6%E9%83%A8/" title="微信小程序回到顶部">微信小程序回到顶部</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%B8%B8%E7%94%A8/" title="分类于 常用">常用</a>
+</div>
+
+    <span><a href="/2017/10/09/%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAtable%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5/" title="实现一个table的增删改查">实现一个table的增删改查</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/%E9%9D%A2%E8%AF%95%E9%AB%98%E5%87%A0%E7%8E%87%E8%80%83%E7%9A%84%E9%A2%98/" title="面试高几率考的题">面试高几率考的题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%B8%B8%E7%94%A8/" title="分类于 常用">常用</a>
+</div>
+
+    <span><a href="/2017/10/09/%E5%85%AB%E5%8D%A6%E9%98%B5/" title="八卦阵">八卦阵</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%B8%B8%E7%94%A8/" title="分类于 常用">常用</a>
+</div>
+
+    <span><a href="/2017/10/09/%E4%BF%AE%E6%94%B9%E6%95%88%E6%9E%9C/" title="修改效果">修改效果</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/canvas%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/" title="canvas常用方法总结">canvas常用方法总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/Jquery%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/" title="jQuery常用方法总结（前端的必须好好看看）">jQuery常用方法总结（前端的必须好好看看）</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" title="分类于 小程序">小程序</a>
+</div>
+
+    <span><a href="/2017/10/09/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%8A%E6%8B%89%E5%8A%A0%E8%BD%BD/" title="微信小程序上拉加载">微信小程序上拉加载</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E6%80%BB%E7%BB%93/" title="分类于 总结">总结</a>
+</div>
+
+    <span><a href="/2017/10/09/%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" title="项目开发流程">项目开发流程</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2021</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">高祥 @ GX</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2017/10/09/node常见面试题库/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,copyright: '复制成功，转载请遵守 高祥的 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
